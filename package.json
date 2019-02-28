@@ -1,0 +1,14 @@
+{
+  "name": "soa-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "json-diff": "0.5.4",
+    "node-dig-dns": "0.2.10",
+    "nodemailer": "5.1.1"
+  }
+}
