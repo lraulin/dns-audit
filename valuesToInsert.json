@@ -1,0 +1,2894 @@
+[
+  [
+    "Thu Mar 07 2019 12:23:20 GMT-0500 (Eastern Standard Time)",
+    "382reporting.ost.dot.gov",
+    "A",
+    "204.68.195.12"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:21 GMT-0500 (Eastern Standard Time)",
+    "3pdp.fmcsa.dot.gov",
+    "A",
+    "10.75.160.3"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:21 GMT-0500 (Eastern Standard Time)",
+    "911-test.nhtsa.gov",
+    "A",
+    "204.68.194.86"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:21 GMT-0500 (Eastern Standard Time)",
+    "ac-1.dot.gov",
+    "A",
+    "204.68.202.41"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:21 GMT-0500 (Eastern Standard Time)",
+    "ac-2.dot.gov",
+    "A",
+    "204.68.202.42"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:21 GMT-0500 (Eastern Standard Time)",
+    "ac.dot.gov",
+    "A",
+    "204.68.202.40"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:21 GMT-0500 (Eastern Standard Time)",
+    "ac1.dot.gov",
+    "A",
+    "204.68.202.68"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:21 GMT-0500 (Eastern Standard Time)",
+    "ac2.dot.gov",
+    "A",
+    "204.68.202.69"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:22 GMT-0500 (Eastern Standard Time)",
+    "academy.jccbi.gov",
+    "A",
+    "162.58.35.108"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:22 GMT-0500 (Eastern Standard Time)",
+    "academy.jccbi.gov",
+    "AAAA",
+    "2001:19e8:8041:23::1108"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:22 GMT-0500 (Eastern Standard Time)",
+    "acbackup.dot.gov",
+    "A",
+    "204.68.202.205"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:22 GMT-0500 (Eastern Standard Time)",
+    "adfs.dot.gov",
+    "A",
+    "152.120.228.84"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:22 GMT-0500 (Eastern Standard Time)",
+    "ai.fmcsa.dot.gov",
+    "A",
+    "10.75.160.40"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:22 GMT-0500 (Eastern Standard Time)",
+    "airconsumer.dot.gov",
+    "CNAME",
+    "osthqnwas043.ost.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:23 GMT-0500 (Eastern Standard Time)",
+    "aitraining.volpe.dot.gov",
+    "A",
+    "152.122.41.36"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:23 GMT-0500 (Eastern Standard Time)",
+    "ama310s1.jccbi.gov",
+    "A",
+    "162.58.34.208"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:23 GMT-0500 (Eastern Standard Time)",
+    "ama310s1.jccbi.gov",
+    "AAAA",
+    "2001:19e8:8041:22::1208"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:24 GMT-0500 (Eastern Standard Time)",
+    "ama310s7.jccbi.gov",
+    "A",
+    "162.58.35.102"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:24 GMT-0500 (Eastern Standard Time)",
+    "ama310s7.jccbi.gov",
+    "AAAA",
+    "2001:19e8:8041:23::1102"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:24 GMT-0500 (Eastern Standard Time)",
+    "ame.cami.jccbi.gov",
+    "A",
+    "162.58.35.84"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:24 GMT-0500 (Eastern Standard Time)",
+    "ame.cami.jccbi.gov",
+    "AAAA",
+    "2001:19e8:8041:23::3084"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:24 GMT-0500 (Eastern Standard Time)",
+    "animalreport.ost.dot.gov",
+    "A",
+    "204.68.195.17"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:24 GMT-0500 (Eastern Standard Time)",
+    "aosftp.jccbi.gov",
+    "A",
+    "162.58.35.233"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:24 GMT-0500 (Eastern Standard Time)",
+    "api.nhtsa.gov",
+    "CNAME",
+    "d2bgzzm2bkb8ja.cloudfront.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:24 GMT-0500 (Eastern Standard Time)",
+    "app.seavision.volpe.dot.gov",
+    "CNAME",
+    "sv2-prod-external-web-elb-1459465596.us-east-1.elb.amazonaws.com."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:25 GMT-0500 (Eastern Standard Time)",
+    "app.stag.seavision.volpe.dot.gov",
+    "CNAME",
+    "sv2-stag-cloudfront-web-elb-1921081515.us-east-1.elb.amazonaws.com."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:25 GMT-0500 (Eastern Standard Time)",
+    "apps.bts.gov",
+    "A",
+    "204.68.196.17"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:25 GMT-0500 (Eastern Standard Time)",
+    "arc-mcac-a312.jccbi.gov",
+    "A",
+    "162.58.35.238"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:25 GMT-0500 (Eastern Standard Time)",
+    "arc-mcac-a312.jccbi.gov",
+    "AAAA",
+    "2001:19e8:8041:23::1238"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:25 GMT-0500 (Eastern Standard Time)",
+    "arc-mcac-vw117.jccbi.gov",
+    "A",
+    "162.58.35.116"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:25 GMT-0500 (Eastern Standard Time)",
+    "arc-mcac-vw117.jccbi.gov",
+    "AAAA",
+    "2001:19e8:8041:23::1116"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:25 GMT-0500 (Eastern Standard Time)",
+    "arc-mcac-vw172.jccbi.gov",
+    "A",
+    "162.58.33.172"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:25 GMT-0500 (Eastern Standard Time)",
+    "ask.fmcsa.dot.gov",
+    "CNAME",
+    "fmcsa.custhelp.com."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:25 GMT-0500 (Eastern Standard Time)",
+    "atcreform.gov",
+    "NS",
+    "edns1.dot.gov. edns2.dot.gov. edns3.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:25 GMT-0500 (Eastern Standard Time)",
+    "atcreform.gov",
+    "SOA",
+    "600"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:25 GMT-0500 (Eastern Standard Time)",
+    "atcreform.gov",
+    "A",
+    "204.68.196.12"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:26 GMT-0500 (Eastern Standard Time)",
+    "balancer1.nhtsa.dot.gov",
+    "A",
+    "204.68.194.196"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:26 GMT-0500 (Eastern Standard Time)",
+    "bip.fhwa.dot.gov",
+    "CNAME",
+    "fhw1xavwasp49.fhwa.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:26 GMT-0500 (Eastern Standard Time)",
+    "bomgar.dot.gov",
+    "A",
+    "204.68.194.42"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:26 GMT-0500 (Eastern Standard Time)",
+    "borderplanning.fhwa.dot.gov",
+    "A",
+    "204.68.194.130"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:27 GMT-0500 (Eastern Standard Time)",
+    "bts.dot.gov",
+    "MX",
+    "SMTP08.dot.gov. SMTP10.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:27 GMT-0500 (Eastern Standard Time)",
+    "bts.dot.gov",
+    "SOA",
+    "86400"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:27 GMT-0500 (Eastern Standard Time)",
+    "bts.dot.gov",
+    "NS",
+    "dotazedns002vg.ad.dot.gov. idns1.dot.gov. idns2.dot.gov. idns3.dot.gov. idns4.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:27 GMT-0500 (Eastern Standard Time)",
+    "c3rs.bts.gov",
+    "CNAME",
+    "ccdp.bts.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:27 GMT-0500 (Eastern Standard Time)",
+    "ccdp.bts.gov",
+    "A",
+    "199.79.178.200"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:27 GMT-0500 (Eastern Standard Time)",
+    "cdan-prod-balancer.nhtsa.dot.gov",
+    "A",
+    "204.68.194.55"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:27 GMT-0500 (Eastern Standard Time)",
+    "cdan.dot.gov",
+    "A",
+    "204.68.194.135"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:27 GMT-0500 (Eastern Standard Time)",
+    "cdan.dot.gov",
+    "SOA",
+    "86400"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:27 GMT-0500 (Eastern Standard Time)",
+    "cdan.dot.gov",
+    "NS",
+    "dotazedns002vg.ad.dot.gov. idns1.dot.gov. idns2.dot.gov. idns3.dot.gov. idns4.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:27 GMT-0500 (Eastern Standard Time)",
+    "cdan.nhtsa.gov",
+    "A",
+    "204.68.194.135"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:27 GMT-0500 (Eastern Standard Time)",
+    "chat.seavision.volpe.dot.gov",
+    "CNAME",
+    "sv2-prod-chat-external-web-elb-780448401.us-east-1.elb.amazonaws.com."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:27 GMT-0500 (Eastern Standard Time)",
+    "chat.seavision2-integ.volpe.dot.gov",
+    "CNAME",
+    "sv2-int-chat-external-web-elb-755443434.us-east-1.elb.amazonaws.com."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:27 GMT-0500 (Eastern Standard Time)",
+    "chat.stag.seavision.volpe.dot.gov",
+    "CNAME",
+    "sv2-stag-chat-external-web-elb-1667618461.us-east-1.elb.amazonaws.com."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:27 GMT-0500 (Eastern Standard Time)",
+    "checkthebox.dot.gov",
+    "CNAME",
+    "www.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:27 GMT-0500 (Eastern Standard Time)",
+    "civilrights.dot.gov",
+    "CNAME",
+    "www.redirect.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:28 GMT-0500 (Eastern Standard Time)",
+    "closecall.bts.gov",
+    "CNAME",
+    "ccdp.bts.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:28 GMT-0500 (Eastern Standard Time)",
+    "cms.bts.dot.gov",
+    "CNAME",
+    "admin.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:28 GMT-0500 (Eastern Standard Time)",
+    "cms.data.fra.dot.gov",
+    "CNAME",
+    "admin.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:28 GMT-0500 (Eastern Standard Time)",
+    "cms.dot.gov",
+    "CNAME",
+    "admin.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:29 GMT-0500 (Eastern Standard Time)",
+    "cms.fhwa.dot.gov",
+    "CNAME",
+    "admin.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:29 GMT-0500 (Eastern Standard Time)",
+    "cms.fmcsa.dot.gov",
+    "CNAME",
+    "admin.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:29 GMT-0500 (Eastern Standard Time)",
+    "cms.fta.dot.gov",
+    "CNAME",
+    "admin.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:29 GMT-0500 (Eastern Standard Time)",
+    "cms.marad.dot.gov",
+    "CNAME",
+    "admin.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:29 GMT-0500 (Eastern Standard Time)",
+    "cms.phmsa.dot.gov",
+    "CNAME",
+    "admin.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:29 GMT-0500 (Eastern Standard Time)",
+    "cms.seaway.dot.gov",
+    "CNAME",
+    "admin.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:29 GMT-0500 (Eastern Standard Time)",
+    "cms.secure.dot.gov",
+    "CNAME",
+    "admin.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:29 GMT-0500 (Eastern Standard Time)",
+    "collaboration.fhwa.dot.gov",
+    "A",
+    "204.68.194.64"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:29 GMT-0500 (Eastern Standard Time)",
+    "corridors.dot.gov",
+    "A",
+    "204.68.194.130"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:29 GMT-0500 (Eastern Standard Time)",
+    "corridors.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:130"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:29 GMT-0500 (Eastern Standard Time)",
+    "crashstats.nhtsa.dot.gov",
+    "CNAME",
+    "nhthqnwas861.ext.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:29 GMT-0500 (Eastern Standard Time)",
+    "crashviewer.nhtsa.dot.gov",
+    "CNAME",
+    "nhthqnwas861.ext.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:29 GMT-0500 (Eastern Standard Time)",
+    "crd.dot.gov",
+    "A",
+    "204.68.194.226"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:29 GMT-0500 (Eastern Standard Time)",
+    "crd.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:226"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:29 GMT-0500 (Eastern Standard Time)",
+    "csa.fmcsa.dot.gov",
+    "A",
+    "10.75.160.8"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:29 GMT-0500 (Eastern Standard Time)",
+    "csatraining.volpe.dot.gov",
+    "A",
+    "152.122.41.38"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:29 GMT-0500 (Eastern Standard Time)",
+    "cvisn.fmcsa.dot.gov",
+    "A",
+    "10.75.160.9"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:29 GMT-0500 (Eastern Standard Time)",
+    "damis.dot.gov",
+    "A",
+    "152.122.41.174"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:29 GMT-0500 (Eastern Standard Time)",
+    "data.fra.dot.gov",
+    "CNAME",
+    "data.fra.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:30 GMT-0500 (Eastern Standard Time)",
+    "data.transportation.gov",
+    "CNAME",
+    "cijahsahvu.cust.socrata.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:30 GMT-0500 (Eastern Standard Time)",
+    "dataqs.fmcsa.dot.gov",
+    "A",
+    "10.75.160.41"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:30 GMT-0500 (Eastern Standard Time)",
+    "demo.eebacs.fhwa.dot.gov",
+    "CNAME",
+    "eebacs-264589463.us-east-1.elb.amazonaws.com."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:40 GMT-0500 (Eastern Standard Time)",
+    "dev.explore.dot.gov",
+    "CNAME",
+    "OSTRAZEDWWS001.ext.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:40 GMT-0500 (Eastern Standard Time)",
+    "dialin.dot.gov",
+    "CNAME",
+    "lyncdiscover.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:41 GMT-0500 (Eastern Standard Time)",
+    "distracteddriving.gov",
+    "NS",
+    "edns1.dot.gov. edns2.dot.gov. edns3.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:41 GMT-0500 (Eastern Standard Time)",
+    "distracteddriving.gov",
+    "SOA",
+    "900"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:41 GMT-0500 (Eastern Standard Time)",
+    "distracteddriving.gov",
+    "A",
+    "204.68.194.196"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:42 GMT-0500 (Eastern Standard Time)",
+    "distraction.gov",
+    "NS",
+    "edns1.dot.gov. edns2.dot.gov. edns3.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:42 GMT-0500 (Eastern Standard Time)",
+    "distraction.gov",
+    "SOA",
+    "900"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:42 GMT-0500 (Eastern Standard Time)",
+    "distraction.gov",
+    "MX",
+    "SMTP08.dot.gov. SMTP09.dot.gov. SMTP10.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:42 GMT-0500 (Eastern Standard Time)",
+    "distraction.gov",
+    "A",
+    "204.68.194.196"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:42 GMT-0500 (Eastern Standard Time)",
+    "dot.gov",
+    "AAAA",
+    "2001:19e8:1:e8:ac99:5840:e926:f1b5 2001:19e8:1:e8:e437:7f8e:e556:b42c 2001:19e8:f4:212:45dd:a6ca:c1d7:a350 2001:19e8:f4:212:a559:f83c:4221:5fb3"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:42 GMT-0500 (Eastern Standard Time)",
+    "dot.gov",
+    "MX",
+    "SMTP09.dot.gov. SMTP10.dot.gov. smtp08.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:42 GMT-0500 (Eastern Standard Time)",
+    "dot.gov",
+    "A",
+    "152.120.206.51 152.120.206.60 152.120.209.30 152.120.209.31 152.120.226.112 152.120.226.38 152.120.226.8 152.120.228.15 152.120.228.7"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:42 GMT-0500 (Eastern Standard Time)",
+    "dot.gov",
+    "SOA",
+    "900"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:42 GMT-0500 (Eastern Standard Time)",
+    "dot.gov",
+    "NS",
+    "dotazedns002vg.ad.dot.gov. idns1.dot.gov. idns2.dot.gov. idns3.dot.gov. idns4.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:42 GMT-0500 (Eastern Standard Time)",
+    "dotcms.fra.dot.gov",
+    "CNAME",
+    "admin.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:42 GMT-0500 (Eastern Standard Time)",
+    "dotdmzadf001vg.ext.dot.gov",
+    "A",
+    "204.68.194.90"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:42 GMT-0500 (Eastern Standard Time)",
+    "dotdmzadf002vg.ext.dot.gov",
+    "A",
+    "204.68.194.91"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:42 GMT-0500 (Eastern Standard Time)",
+    "dotdmzadf022vg.ext.dot.gov",
+    "A",
+    "204.152.44.121"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:42 GMT-0500 (Eastern Standard Time)",
+    "dotdmzadf023vg.ext.dot.gov",
+    "A",
+    "204.152.44.120"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:42 GMT-0500 (Eastern Standard Time)",
+    "dotdmzasr001vg.ext.dot.gov",
+    "A",
+    "204.68.196.85"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:42 GMT-0500 (Eastern Standard Time)",
+    "dotdmzsus001vg.ext.dot.gov",
+    "A",
+    "204.68.194.39"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:42 GMT-0500 (Eastern Standard Time)",
+    "dotdmzwas005vg.ext.dot.gov",
+    "A",
+    "172.16.167.58 204.68.194.102 204.68.194.103 204.68.194.99"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:42 GMT-0500 (Eastern Standard Time)",
+    "dotdmzwas018vg.dot.gov",
+    "CNAME",
+    "DOTDMZWAS018VG.ext.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:43 GMT-0500 (Eastern Standard Time)",
+    "dotdmzwas018vg.ext.dot.gov",
+    "A",
+    "204.68.194.45"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:43 GMT-0500 (Eastern Standard Time)",
+    "dotdmzwas019vg.dot.gov",
+    "CNAME",
+    "DOTDMZWAS019VG.ext.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:43 GMT-0500 (Eastern Standard Time)",
+    "dotdmzwas019vg.ext.dot.gov",
+    "A",
+    "204.68.194.46"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:43 GMT-0500 (Eastern Standard Time)",
+    "dotdmzwws001vg.ext.dot.gov",
+    "A",
+    "204.68.196.59"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:43 GMT-0500 (Eastern Standard Time)",
+    "dotdr1vdi015vg.dot.gov",
+    "A",
+    "204.152.44.7"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:43 GMT-0500 (Eastern Standard Time)",
+    "dotdr1vdi016vg.dot.gov",
+    "A",
+    "204.152.44.8"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:43 GMT-0500 (Eastern Standard Time)",
+    "dotdr1vdi017vg.dot.gov",
+    "A",
+    "204.152.44.9"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:43 GMT-0500 (Eastern Standard Time)",
+    "dothqevdi015vg.dot.gov",
+    "A",
+    "204.68.194.20"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:43 GMT-0500 (Eastern Standard Time)",
+    "dothqevdi016vg.dot.gov",
+    "A",
+    "204.68.194.21"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:43 GMT-0500 (Eastern Standard Time)",
+    "dothqevdi017vg.dot.gov",
+    "A",
+    "204.68.194.22"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:43 GMT-0500 (Eastern Standard Time)",
+    "dothqnbom001.dot.gov",
+    "A",
+    "204.68.194.47"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:43 GMT-0500 (Eastern Standard Time)",
+    "dothqnbom002.dot.gov",
+    "A",
+    "204.68.194.49"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:43 GMT-0500 (Eastern Standard Time)",
+    "dothqnwas053vg.ext.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:65"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:43 GMT-0500 (Eastern Standard Time)",
+    "dothqnwas053vg.ext.dot.gov",
+    "A",
+    "204.68.194.65"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:50 GMT-0500 (Eastern Standard Time)",
+    "dotnet.dot.gov",
+    "CNAME",
+    "DOTNET-F5VIP.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:50 GMT-0500 (Eastern Standard Time)",
+    "dp.dot.gov",
+    "CNAME",
+    "DOTDMZWAS019VG.ext.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:50 GMT-0500 (Eastern Standard Time)",
+    "drc.dot.gov",
+    "A",
+    "204.68.194.65"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:50 GMT-0500 (Eastern Standard Time)",
+    "dredata.nhtsa.gov",
+    "CNAME",
+    "dredata.nhtsa.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:50 GMT-0500 (Eastern Standard Time)",
+    "eauth1.fhwa.dot.gov",
+    "A",
+    "204.68.194.108"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:50 GMT-0500 (Eastern Standard Time)",
+    "edtservice.cdan.dot.gov",
+    "A",
+    "204.68.194.234"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:50 GMT-0500 (Eastern Standard Time)",
+    "eebacs.fhwa.dot.gov",
+    "CNAME",
+    "eebacs-264589463.us-east-1.elb.amazonaws.com."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:50 GMT-0500 (Eastern Standard Time)",
+    "einvoice.esc.gov",
+    "A",
+    "162.58.35.158"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:50 GMT-0500 (Eastern Standard Time)",
+    "eld.fmcsa.dot.gov",
+    "CNAME",
+    "eldenf-prod-710696995.us-east-1.elb.amazonaws.com."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:50 GMT-0500 (Eastern Standard Time)",
+    "elmscontent.dot.gov",
+    "AAAA",
+    "2001:19e8:8041:23::1116"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:50 GMT-0500 (Eastern Standard Time)",
+    "elmscontent.dot.gov",
+    "A",
+    "162.58.35.116"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:50 GMT-0500 (Eastern Standard Time)",
+    "elmsstaging.dot.gov",
+    "AAAA",
+    "2001:19e8:8041:22::1101"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:50 GMT-0500 (Eastern Standard Time)",
+    "elmsstaging.dot.gov",
+    "A",
+    "162.58.34.101"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:50 GMT-0500 (Eastern Standard Time)",
+    "email.dot.gov",
+    "A",
+    "198.252.0.222"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:51 GMT-0500 (Eastern Standard Time)",
+    "emfie.dot.gov",
+    "A",
+    "204.68.194.56"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:52 GMT-0500 (Eastern Standard Time)",
+    "ems.gov",
+    "NS",
+    "edns1.dot.gov. edns2.dot.gov. edns3.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:52 GMT-0500 (Eastern Standard Time)",
+    "ems.gov",
+    "SOA",
+    "900"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:52 GMT-0500 (Eastern Standard Time)",
+    "ems.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:196"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:52 GMT-0500 (Eastern Standard Time)",
+    "ems.gov",
+    "A",
+    "204.68.194.196"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:52 GMT-0500 (Eastern Standard Time)",
+    "enepa.fhwa.dot.gov",
+    "A",
+    "204.68.194.60"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:52 GMT-0500 (Eastern Standard Time)",
+    "engage.dot.gov",
+    "A",
+    "204.68.194.62"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:52 GMT-0500 (Eastern Standard Time)",
+    "environment.fhwa.dot.gov",
+    "A",
+    "152.122.41.128"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:52 GMT-0500 (Eastern Standard Time)",
+    "epr.marad.dot.gov",
+    "A",
+    "204.238.19.20"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:52 GMT-0500 (Eastern Standard Time)",
+    "epr.marad.dot.gov",
+    "AAAA",
+    "2001:19e8:d4:1::20"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:52 GMT-0500 (Eastern Standard Time)",
+    "es3.esc.gov",
+    "A",
+    "162.58.35.20"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:52 GMT-0500 (Eastern Standard Time)",
+    "escapps.esc.gov",
+    "A",
+    "162.58.34.231"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:52 GMT-0500 (Eastern Standard Time)",
+    "escsupportservice.esc.gov",
+    "A",
+    "162.58.38.46"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:52 GMT-0500 (Eastern Standard Time)",
+    "escsupportservices.esc.gov",
+    "A",
+    "162.58.38.47"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:52 GMT-0500 (Eastern Standard Time)",
+    "esubmit.rita.dot.gov",
+    "A",
+    "204.68.194.71"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:52 GMT-0500 (Eastern Standard Time)",
+    "explore.dot.gov",
+    "A",
+    "204.69.250.17"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "ezexam.jccbi.gov",
+    "CNAME",
+    "arc-mcac-a312.jccbi.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "f5ltmvpn-dmz-vip.dot.gov",
+    "A",
+    "204.68.194.80"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "faasafety.gov",
+    "NS",
+    "avatar.esc.gov. styx.esc.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "faasafety.gov",
+    "SOA",
+    "3600"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "faasafety.gov",
+    "MX",
+    "amcrelay1.faa.gov. amcrelay2.faa.gov. amcrelay3.faa.gov. relay1.faa.gov. relay2.faa.gov. relay3.faa.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "faasafety.gov",
+    "A",
+    "162.58.33.240"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "faces.fta.dot.gov",
+    "A",
+    "204.68.196.37"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "facesdev1.fta.dot.gov",
+    "A",
+    "152.119.151.8"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "facesdev2.fta.dot.gov",
+    "A",
+    "152.119.151.1"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "facesdev3.fta.dot.gov",
+    "A",
+    "152.119.151.18"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "facesdev4.fta.dot.gov",
+    "A",
+    "152.119.151.19"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "facesdev5.fta.dot.gov",
+    "A",
+    "152.119.151.20"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "facespreprod.fta.dot.gov",
+    "A",
+    "152.119.151.6"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "facestest1.fta.dot.gov",
+    "A",
+    "152.119.151.2"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "facestest2.fta.dot.gov",
+    "A",
+    "152.119.151.3"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "facestest3.fta.dot.gov",
+    "A",
+    "152.119.151.16"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "facestest4.fta.dot.gov",
+    "A",
+    "152.119.151.17"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "facestest5.fta.dot.gov",
+    "A",
+    "152.119.151.21"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "facestraining.fta.dot.gov",
+    "A",
+    "152.119.151.5"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "facesuat.fta.dot.gov",
+    "A",
+    "152.119.151.4"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "fedstar.phmsa.dot.gov",
+    "A",
+    "204.68.194.32"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:53 GMT-0500 (Eastern Standard Time)",
+    "fhwa.dot.gov",
+    "MX",
+    "smtp08.dot.gov. smtp09.dot.gov. smtp10.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "fhwaapps.fhwa.dot.gov",
+    "A",
+    "204.68.194.120"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "fhwaappssp.fhwa.dot.gov",
+    "A",
+    "204.68.194.173"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "fhwaopsweb.fhwa.dot.gov",
+    "A",
+    "204.68.194.130"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "filingtarmacdelayplan.dot.gov",
+    "A",
+    "204.68.195.13"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "financecommission.dot.gov",
+    "A",
+    "204.68.194.207"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "flh.fhwa.dot.gov",
+    "CNAME",
+    "fhw1xavwasp28.fhwa.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "fmcsa.dot.gov",
+    "SOA",
+    "60"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "fmcsa.dot.gov",
+    "NS",
+    "fmcauswdc01v.fmcsa.dot.gov. fmcbwiwdc01v.fmcsa.dot.gov. fmcbwiwdc02v.fmcsa.dot.gov. fmcokcwdc02v.fmcsa.dot.gov. fmcsanwdc02v.fmcsa.dot.gov. mcdc4-faa.fmcsa.dot.gov. mcdc6-faa.fmcsa.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "fmcsa.dot.gov",
+    "A",
+    "169.135.214.50 169.135.53.43 169.135.90.10 169.135.90.97 172.26.95.220 172.29.130.241 172.29.130.242"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "fmcsa.portal.dot.gov",
+    "CNAME",
+    "www.portal.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "forms.cdan.dot.gov",
+    "A",
+    "204.68.194.168"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "fra.dot.gov",
+    "MX",
+    "smtp08.dot.gov. smtp10.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "fra.dot.gov",
+    "A",
+    "204.68.194.252"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "fra.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:252"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "fra.dot.gov",
+    "SOA",
+    "600"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "fra.dot.gov",
+    "NS",
+    "dotazedns002vg.ad.dot.gov. idns1.dot.gov. idns2.dot.gov. idns3.dot.gov. idns4.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "fragis.fra.dot.gov",
+    "CNAME",
+    "fra-global.fra.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "frahqelpx002ex.ext.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:252"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "frahqelpx002ex.ext.dot.gov",
+    "A",
+    "204.68.194.252"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "fraipv6.fra.dot.gov",
+    "CNAME",
+    "fraglobal.fra.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "frasp.fra.dot.gov",
+    "CNAME",
+    "fra-global.fra.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "freight.dot.gov",
+    "A",
+    "204.68.194.225"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "freight.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:225"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "fta.dot.gov",
+    "A",
+    "204.68.194.77"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "fta.dot.gov",
+    "MX",
+    "SMTP08.dot.gov. SMTP10.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "fta.dot.gov",
+    "SOA",
+    "86400"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "fta.dot.gov",
+    "NS",
+    "dotazedns002vg.ad.dot.gov. idns1.dot.gov. idns2.dot.gov. idns3.dot.gov. idns4.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "ftaecho.fta.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:77"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "ftaecho.fta.dot.gov",
+    "A",
+    "204.68.194.77"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "ftaecho2.fta.dot.gov",
+    "CNAME",
+    "FTAHQELAS001VH-ECHO.ad.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "ftawebapps.fta.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:61"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "ftawebapps.fta.dot.gov",
+    "A",
+    "204.68.194.61"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "ftawebprod.fta.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:77"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "ftawebprod.fta.dot.gov",
+    "A",
+    "204.68.194.77"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "ftp.nhtsa.dot.gov",
+    "A",
+    "204.68.194.196"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "geo.dot.gov",
+    "CNAME",
+    "OSTAZEWWS005VG.ext.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "gis.fhwa.dot.gov",
+    "A",
+    "152.122.41.80"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "gradedec.fra.dot.gov",
+    "CNAME",
+    "fra-global.fra.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "grants.ost.dot.gov",
+    "A",
+    "204.69.250.11"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "groups.nhtsa.gov",
+    "MX",
+    "mx.public.govdelivery.com. mx2.public.govdelivery.com."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:54 GMT-0500 (Eastern Standard Time)",
+    "groups.nhtsa.gov",
+    "A",
+    "209.134.144.154"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:55 GMT-0500 (Eastern Standard Time)",
+    "gts.nhtsa.gov",
+    "A",
+    "204.68.194.153"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:55 GMT-0500 (Eastern Standard Time)",
+    "gtstest.nhtsa.gov",
+    "A",
+    "204.68.194.196"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:55 GMT-0500 (Eastern Standard Time)",
+    "hazmat.fmcsa.dot.gov",
+    "A",
+    "10.75.160.9"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:55 GMT-0500 (Eastern Standard Time)",
+    "hazmatgrants.phmsa.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:187"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:55 GMT-0500 (Eastern Standard Time)",
+    "hazmatgrants.phmsa.dot.gov",
+    "A",
+    "204.68.194.187"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:55 GMT-0500 (Eastern Standard Time)",
+    "hazmatonline.phmsa.dot.gov",
+    "CNAME",
+    "phmhqnwas004.phmsa.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:55 GMT-0500 (Eastern Standard Time)",
+    "hazmatonlinedevtest.phmsa.dot.gov",
+    "A",
+    "204.68.194.26"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:55 GMT-0500 (Eastern Standard Time)",
+    "hazmatsafety.dot.gov",
+    "CNAME",
+    "www.phmsa.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:55 GMT-0500 (Eastern Standard Time)",
+    "hepgis.fhwa.dot.gov",
+    "A",
+    "152.122.41.73"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:55 GMT-0500 (Eastern Standard Time)",
+    "hfcc.dot.gov",
+    "A",
+    "152.122.41.89"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:55 GMT-0500 (Eastern Standard Time)",
+    "highways.dot.gov",
+    "CNAME",
+    "www.fhwa.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:55 GMT-0500 (Eastern Standard Time)",
+    "highways.fhwa.dot.gov",
+    "CNAME",
+    "www.fhwa.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:55 GMT-0500 (Eastern Standard Time)",
+    "hip.phmsa.dot.gov",
+    "CNAME",
+    "PHMHQNWAS036.phmsa.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:55 GMT-0500 (Eastern Standard Time)",
+    "hiptest.phmsa.dot.gov",
+    "CNAME",
+    "PHMHQNWAS024.phmsa.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:55 GMT-0500 (Eastern Standard Time)",
+    "hostedsites.volpe.dot.gov",
+    "A",
+    "152.122.41.86"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:55 GMT-0500 (Eastern Standard Time)",
+    "hovpfs.ops.fhwa.dot.gov",
+    "A",
+    "204.68.194.226"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:55 GMT-0500 (Eastern Standard Time)",
+    "hvedata.nhtsa.gov",
+    "A",
+    "204.68.194.198"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:55 GMT-0500 (Eastern Standard Time)",
+    "ia-content-stage.phmsa.dot.gov",
+    "CNAME",
+    "PHMHQNWAS076VG.phmsa.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:55 GMT-0500 (Eastern Standard Time)",
+    "ia-training-stage.phmsa.dot.gov",
+    "CNAME",
+    "PHMHQNWAS081VG.phmsa.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:56 GMT-0500 (Eastern Standard Time)",
+    "icsodiw.nhtsa.gov",
+    "A",
+    "204.68.194.172"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:56 GMT-0500 (Eastern Standard Time)",
+    "icsw.nhtsa.gov",
+    "CNAME",
+    "www.nhtsa.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:56 GMT-0500 (Eastern Standard Time)",
+    "idpwebsealp.fhwa.dot.gov",
+    "A",
+    "204.68.194.229"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:56 GMT-0500 (Eastern Standard Time)",
+    "info.seavision.volpe.dot.gov",
+    "CNAME",
+    "sv2-prod-external-drupal-512515883.us-east-1.elb.amazonaws.com."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:56 GMT-0500 (Eastern Standard Time)",
+    "infobridge.fhwa.dot.gov",
+    "A",
+    "35.169.74.226"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:56 GMT-0500 (Eastern Standard Time)",
+    "infopave.fhwa.dot.gov",
+    "A",
+    "54.208.153.160"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:56 GMT-0500 (Eastern Standard Time)",
+    "infosys.fmcsa.dot.gov",
+    "A",
+    "10.75.160.14"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:56 GMT-0500 (Eastern Standard Time)",
+    "international.fhwa.dot.gov",
+    "A",
+    "204.68.194.121"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:56 GMT-0500 (Eastern Standard Time)",
+    "isearch.nhtsa.gov",
+    "CNAME",
+    "isearch.nhtsa.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:56 GMT-0500 (Eastern Standard Time)",
+    "its.dot.gov",
+    "A",
+    "204.68.194.123"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:56 GMT-0500 (Eastern Standard Time)",
+    "its.dot.gov",
+    "SOA",
+    "86400"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:56 GMT-0500 (Eastern Standard Time)",
+    "its.dot.gov",
+    "NS",
+    "dotazedns002vg.ad.dot.gov. idns1.dot.gov. idns2.dot.gov. idns3.dot.gov. idns4.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "jag.cami.jccbi.gov",
+    "A",
+    "162.58.35.85"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "jag.cami.jccbi.gov",
+    "AAAA",
+    "2001:19e8:8041:23::3085"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "keymaster.dot.gov",
+    "A",
+    "204.68.202.70"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "learn.dot.gov",
+    "A",
+    "162.58.35.154"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "legacy-dredata.nhtsa.gov",
+    "CNAME",
+    "dredata.nhtsa.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "li-public.fmcsa.dot.gov",
+    "A",
+    "10.75.160.16"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "mailsync.oig.dot.gov",
+    "A",
+    "152.120.222.200"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "maps.bts.dot.gov",
+    "CNAME",
+    "BTSGISZWAP003.ext.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "maps.dot.gov",
+    "CNAME",
+    "OSTAZEWWS005VG.ext.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "marad.dot.gov",
+    "MX",
+    "SMTP08.dot.gov. SMTP10.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "marad.dot.gov",
+    "A",
+    "204.238.19.20"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "marad.dot.gov",
+    "AAAA",
+    "2001:19e8:d4:1::20"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "marad.dot.gov",
+    "SOA",
+    "86400"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "marad.dot.gov",
+    "NS",
+    "dotazedns002vg.ad.dot.gov. idns1.dot.gov. idns2.dot.gov. idns3.dot.gov. idns4.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "maradpublicsp.marad.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:17"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "maradpublicsp.marad.dot.gov",
+    "A",
+    "204.68.194.17"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "marapps.dot.gov",
+    "A",
+    "204.238.19.20"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "marapps.dot.gov",
+    "AAAA",
+    "2001:19e8:d4:1::20"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "maritime.dot.gov",
+    "CNAME",
+    "www.marad.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "marweb.marad.dot.gov",
+    "A",
+    "204.238.19.20"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "marweb.marad.dot.gov",
+    "AAAA",
+    "2001:19e8:d4:1::20"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:57 GMT-0500 (Eastern Standard Time)",
+    "mcmis.volpe.dot.gov",
+    "A",
+    "52.201.14.68"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:58 GMT-0500 (Eastern Standard Time)",
+    "mcp.nhtsa.gov",
+    "A",
+    "204.68.194.44"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:58 GMT-0500 (Eastern Standard Time)",
+    "mcs.nhtsa.gov",
+    "A",
+    "204.68.194.245"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:58 GMT-0500 (Eastern Standard Time)",
+    "mcsac.fmcsa.dot.gov",
+    "CNAME",
+    "natss-prod-fmcsapublic-ws.fmcsa.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "mda.volpe.dot.gov",
+    "A",
+    "12.226.29.234"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "meet.dot.gov",
+    "CNAME",
+    "lyncdiscover.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "mobile.fmcsa.dot.gov",
+    "A",
+    "10.75.160.20"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "mos.marad.dot.gov",
+    "AAAA",
+    "2001:19e8:d4:1::20"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "mos.marad.dot.gov",
+    "A",
+    "204.238.19.20"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "mp.dot.gov",
+    "CNAME",
+    "DOTDMZWAS018VG.ext.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "mrb.fmcsa.dot.gov",
+    "CNAME",
+    "natss-prod-fmcsapublic-ws.fmcsa.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "mscs.marad.dot.gov",
+    "AAAA",
+    "2001:19e8:d4:1::20"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "mscs.marad.dot.gov",
+    "A",
+    "204.238.19.20"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "mssis.volpe.dot.gov",
+    "A",
+    "12.226.29.231"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "mutcd.fhwa.dot.gov",
+    "A",
+    "204.68.194.128"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "nationalregistry.fmcsa.dot.gov",
+    "A",
+    "10.75.160.22"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "nccdb.fmcsa.dot.gov",
+    "A",
+    "10.75.160.43"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "near-miss.bts.gov",
+    "CNAME",
+    "safeocs.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "nhi.fhwa.dot.gov",
+    "A",
+    "204.68.194.122"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "nhthqnwas701.nhtsa.dot.gov",
+    "A",
+    "204.68.194.118"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "nhthqnwas733.nhtsa.dot.gov",
+    "A",
+    "204.68.194.244"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "nhthqnwas767.nhtsa.dot.gov",
+    "A",
+    "204.68.194.249"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "nhthqnwas768.nhtsa.dot.gov",
+    "A",
+    "204.68.194.184"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "nhthsaf5b-m.nhtsa.dot.gov",
+    "A",
+    "204.238.19.86"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "nhtsa.dot.gov",
+    "MX",
+    "SMTP08.dot.gov. SMTP10.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "nhtsa.dot.gov",
+    "SOA",
+    "86400"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "nhtsa.dot.gov",
+    "NS",
+    "dotazedns002vg.ad.dot.gov. idns1.dot.gov. idns2.dot.gov. idns3.dot.gov. idns4.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "nprn.marad.dot.gov",
+    "A",
+    "204.238.19.20"
+  ],
+  [
+    "Thu Mar 07 2019 12:23:59 GMT-0500 (Eastern Standard Time)",
+    "nprn.marad.dot.gov",
+    "AAAA",
+    "2001:19e8:d4:1::20"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:00 GMT-0500 (Eastern Standard Time)",
+    "nstrc.nhtsa.gov",
+    "CNAME",
+    "dredata.nhtsa.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:00 GMT-0500 (Eastern Standard Time)",
+    "ntcscheduler.fmcsa.dot.gov",
+    "CNAME",
+    "fmcsa.portal.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:00 GMT-0500 (Eastern Standard Time)",
+    "ntl.bts.gov",
+    "CNAME",
+    "www.bts.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:00 GMT-0500 (Eastern Standard Time)",
+    "ntlsearch.bts.gov",
+    "CNAME",
+    "ntlsearchprod.azurewebsites.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:00 GMT-0500 (Eastern Standard Time)",
+    "oetcrt.dot.gov",
+    "A",
+    "204.68.194.161"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:00 GMT-0500 (Eastern Standard Time)",
+    "oig.dot.gov",
+    "MX",
+    "SMTP10.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:00 GMT-0500 (Eastern Standard Time)",
+    "oig.dot.gov",
+    "SOA",
+    "86400"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:00 GMT-0500 (Eastern Standard Time)",
+    "oig.dot.gov",
+    "NS",
+    "dotazedns002vg.ad.dot.gov. idns1.dot.gov. idns2.dot.gov. idns3.dot.gov. idns4.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:00 GMT-0500 (Eastern Standard Time)",
+    "oigmobile.oig.dot.gov",
+    "A",
+    "152.120.222.159"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:00 GMT-0500 (Eastern Standard Time)",
+    "one.nhtsa.gov",
+    "CNAME",
+    "www.nhtsa.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:00 GMT-0500 (Eastern Standard Time)",
+    "ops.fhwa.dot.gov",
+    "A",
+    "204.68.194.226"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:00 GMT-0500 (Eastern Standard Time)",
+    "opsweb.phmsa.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:191"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:00 GMT-0500 (Eastern Standard Time)",
+    "opsweb.phmsa.dot.gov",
+    "A",
+    "204.68.194.191"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:00 GMT-0500 (Eastern Standard Time)",
+    "origin-dr-gts.nhtsa.gov",
+    "A",
+    "204.238.19.95"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:00 GMT-0500 (Eastern Standard Time)",
+    "origin-www-odi.nhtsa.dot.gov",
+    "A",
+    "204.68.194.147"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:00 GMT-0500 (Eastern Standard Time)",
+    "origin-www.faasafety.gov",
+    "A",
+    "162.58.33.240"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:00 GMT-0500 (Eastern Standard Time)",
+    "origin-www.marad.dot.gov",
+    "A",
+    "204.238.19.20"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:00 GMT-0500 (Eastern Standard Time)",
+    "origin-www.marad.dot.gov",
+    "AAAA",
+    "2001:19e8:d4:1::20"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:00 GMT-0500 (Eastern Standard Time)",
+    "osdbu.dot.gov",
+    "CNAME",
+    "www.redirect.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:00 GMT-0500 (Eastern Standard Time)",
+    "osthqnwas093.dot.gov",
+    "A",
+    "204.68.194.43"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "ostrazedwws001.ext.dot.gov",
+    "A",
+    "204.69.250.16"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "ostrazewws001vg.ext.dot.gov",
+    "A",
+    "204.69.250.13"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "ostrazewws002vg.ext.dot.gov",
+    "A",
+    "204.69.250.17"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "oversight.volpe.dot.gov",
+    "A",
+    "152.122.41.245"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "parkingapp.ost.dot.gov",
+    "CNAME",
+    "OSTHQWWAS003VG.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "pdm.phmsa.dot.gov",
+    "CNAME",
+    "PHMHQNWAS036.phmsa.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "phmhqnwas004.phmsa.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:34"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "phmhqnwas004.phmsa.dot.gov",
+    "A",
+    "204.68.194.34"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "phmhqnwas024.phmsa.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:26"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "phmhqnwas024.phmsa.dot.gov",
+    "A",
+    "204.68.194.26"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "phmhqnwas036.phmsa.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:27"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "phmhqnwas036.phmsa.dot.gov",
+    "A",
+    "204.68.194.27"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "phmhqnwas070vg.phmsa.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:139"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "phmhqnwas070vg.phmsa.dot.gov",
+    "A",
+    "204.68.194.139"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "phmhqnwas071.phmsa.dot.gov",
+    "A",
+    "204.68.194.231"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "phmhqnwas071vg.phmsa.dot.gov",
+    "A",
+    "204.68.194.210"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "phmhqnwas072vg.phmsa.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:223"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "phmhqnwas072vg.phmsa.dot.gov",
+    "A",
+    "204.68.194.223"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "phmhqnwas080vg.phmsa.dot.gov",
+    "AAAA",
+    "2001:19e8:d:2:204:68:196:14"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "phmhqnwas080vg.phmsa.dot.gov",
+    "A",
+    "204.68.196.14"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "phmhqnwas102vg.phmsa.dot.gov",
+    "A",
+    "204.68.194.81"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "phmsa.dot.gov",
+    "MX",
+    "SMTP08.dot.gov. SMTP10.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "phmsa.dot.gov",
+    "SOA",
+    "86400"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "phmsa.dot.gov",
+    "NS",
+    "dotazedns002vg.ad.dot.gov. idns1.dot.gov. idns2.dot.gov. idns3.dot.gov. idns4.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "phmsamobile.phmsa.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:137"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "phmsamobile.phmsa.dot.gov",
+    "A",
+    "204.68.194.137"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "pipelinesafety.dot.gov",
+    "CNAME",
+    "www.phmsa.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "plan4operations.fhwa.dot.gov",
+    "A",
+    "204.68.194.226"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "planning.dot.gov",
+    "CNAME",
+    "www.planning.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "pnt.rita.dot.gov",
+    "CNAME",
+    "www.redirect.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "poolsfc.dot.gov",
+    "A",
+    "152.120.225.77 152.120.225.78 152.120.225.79"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "portal.dot.gov",
+    "CNAME",
+    "www.portal.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "portal.fmcsa.dot.gov",
+    "A",
+    "10.75.160.25"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "portal.phmsa.dot.gov",
+    "CNAME",
+    "PHMHQNWAS036.phmsa.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "preprod.faasafety.gov",
+    "CNAME",
+    "preprod.faasafety.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "primis-stage.phmsa.dot.gov",
+    "CNAME",
+    "PHMHQNWAS074VG.phmsa.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:01 GMT-0500 (Eastern Standard Time)",
+    "primis.phmsa.dot.gov",
+    "A",
+    "204.68.194.139"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:02 GMT-0500 (Eastern Standard Time)",
+    "prs.ost.dot.gov",
+    "A",
+    "204.68.195.15"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:02 GMT-0500 (Eastern Standard Time)",
+    "pvnpms.phmsa.dot.gov",
+    "A",
+    "204.68.194.176"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:12 GMT-0500 (Eastern Standard Time)",
+    "railroads.dot.gov",
+    "CNAME",
+    "www.fra.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:12 GMT-0500 (Eastern Standard Time)",
+    "railroads.fra.dot.gov",
+    "CNAME",
+    "www.fra.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:12 GMT-0500 (Eastern Standard Time)",
+    "rcapm.fra.dot.gov",
+    "CNAME",
+    "f5-fra-rcapm.website.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:12 GMT-0500 (Eastern Standard Time)",
+    "remote.esc.gov",
+    "A",
+    "162.58.34.47"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:12 GMT-0500 (Eastern Standard Time)",
+    "remote2.esc.gov",
+    "CNAME",
+    "remote.esc.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:12 GMT-0500 (Eastern Standard Time)",
+    "remotef.esc.gov",
+    "A",
+    "162.58.34.43"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:12 GMT-0500 (Eastern Standard Time)",
+    "reports.cdan.dot.gov",
+    "A",
+    "204.68.194.235"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:12 GMT-0500 (Eastern Standard Time)",
+    "resourcecenter.911.gov",
+    "A",
+    "204.68.194.197"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:12 GMT-0500 (Eastern Standard Time)",
+    "rita.dot.gov",
+    "A",
+    "204.68.196.12"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:12 GMT-0500 (Eastern Standard Time)",
+    "rita.dot.gov",
+    "SOA",
+    "86400"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:12 GMT-0500 (Eastern Standard Time)",
+    "rita.dot.gov",
+    "NS",
+    "dotazedns002vg.ad.dot.gov. idns1.dot.gov. idns2.dot.gov. idns3.dot.gov. idns4.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:12 GMT-0500 (Eastern Standard Time)",
+    "rithqnwws008vg.ext.dot.gov",
+    "A",
+    "204.68.194.88"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:12 GMT-0500 (Eastern Standard Time)",
+    "rms.dot.gov",
+    "A",
+    "152.120.226.5"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:13 GMT-0500 (Eastern Standard Time)",
+    "rosap.ntl.bts.gov",
+    "A",
+    "34.199.154.156"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:13 GMT-0500 (Eastern Standard Time)",
+    "rrsp.fra.dot.gov",
+    "CNAME",
+    "fra-global.fra.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:13 GMT-0500 (Eastern Standard Time)",
+    "rsac.fra.dot.gov",
+    "CNAME",
+    "fra-global.fra.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:13 GMT-0500 (Eastern Standard Time)",
+    "rspcb.safety.fhwa.dot.gov",
+    "A",
+    "152.122.41.75"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:13 GMT-0500 (Eastern Standard Time)",
+    "safecar.gov",
+    "NS",
+    "edns1.dot.gov. edns2.dot.gov. edns3.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:13 GMT-0500 (Eastern Standard Time)",
+    "safecar.gov",
+    "SOA",
+    "600"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:13 GMT-0500 (Eastern Standard Time)",
+    "safecar.gov",
+    "A",
+    "204.68.194.196"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:13 GMT-0500 (Eastern Standard Time)",
+    "safedigging.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:185"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:13 GMT-0500 (Eastern Standard Time)",
+    "safeocs.gov",
+    "A",
+    "199.79.178.200"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:13 GMT-0500 (Eastern Standard Time)",
+    "safer.fmcsa.dot.gov",
+    "CNAME",
+    "saferp1.fmcsa.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:13 GMT-0500 (Eastern Standard Time)",
+    "safercar.gov",
+    "A",
+    "204.68.194.196"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:14 GMT-0500 (Eastern Standard Time)",
+    "safertruck.gov",
+    "NS",
+    "edns1.dot.gov. edns2.dot.gov. edns3.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:14 GMT-0500 (Eastern Standard Time)",
+    "safertruck.gov",
+    "SOA",
+    "900"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:14 GMT-0500 (Eastern Standard Time)",
+    "safertruck.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:196"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:14 GMT-0500 (Eastern Standard Time)",
+    "safertruck.gov",
+    "A",
+    "204.68.194.196"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:14 GMT-0500 (Eastern Standard Time)",
+    "safety.fhwa.dot.gov",
+    "A",
+    "204.68.194.127"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:14 GMT-0500 (Eastern Standard Time)",
+    "safetydata.fra.dot.gov",
+    "CNAME",
+    "fra-global.fra.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:14 GMT-0500 (Eastern Standard Time)",
+    "safetytalk.fhwa.dot.gov",
+    "A",
+    "209.134.144.163"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:14 GMT-0500 (Eastern Standard Time)",
+    "sai.dot.gov",
+    "A",
+    "152.122.41.69"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:14 GMT-0500 (Eastern Standard Time)",
+    "sas-prod-oa-balancer.nhtsa.dot.gov",
+    "A",
+    "204.68.194.135"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:15 GMT-0500 (Eastern Standard Time)",
+    "score.fmcsa.dot.gov",
+    "CNAME",
+    "fmcsa.portal.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:15 GMT-0500 (Eastern Standard Time)",
+    "seavision.volpe.dot.gov",
+    "CNAME",
+    "d1lfdnnqj01fri.cloudfront.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:15 GMT-0500 (Eastern Standard Time)",
+    "seaway.dot.gov",
+    "SOA",
+    "86400"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:15 GMT-0500 (Eastern Standard Time)",
+    "seaway.dot.gov",
+    "NS",
+    "dotazedns002vg.ad.dot.gov. idns1.dot.gov. idns2.dot.gov. idns3.dot.gov. idns4.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:15 GMT-0500 (Eastern Standard Time)",
+    "secure.dot.gov",
+    "CNAME",
+    "www.secure.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:15 GMT-0500 (Eastern Standard Time)",
+    "sfm.fmcsa.dot.gov",
+    "CNAME",
+    "www.secure.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:15 GMT-0500 (Eastern Standard Time)",
+    "sftp.fhwa.dot.gov",
+    "CNAME",
+    "fhw1xavwfsp04.fhwa.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:15 GMT-0500 (Eastern Standard Time)",
+    "sftp.phmsa.dot.gov",
+    "CNAME",
+    "phmhqnwas005.ad.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:16 GMT-0500 (Eastern Standard Time)",
+    "sir.fra.dot.gov",
+    "CNAME",
+    "fra-global.fra.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:16 GMT-0500 (Eastern Standard Time)",
+    "skynet.nhtsa.gov",
+    "A",
+    "204.68.194.106"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:16 GMT-0500 (Eastern Standard Time)",
+    "slfts.fhwa.dot.gov",
+    "CNAME",
+    "fhw1xavlfsp01.fhwa.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:16 GMT-0500 (Eastern Standard Time)",
+    "smarterskies.gov",
+    "NS",
+    "edns1.dot.gov. edns2.dot.gov. edns3.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:16 GMT-0500 (Eastern Standard Time)",
+    "smarterskies.gov",
+    "SOA",
+    "600"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:16 GMT-0500 (Eastern Standard Time)",
+    "smarterskies.gov",
+    "A",
+    "204.68.196.12"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:16 GMT-0500 (Eastern Standard Time)",
+    "sra.volpe.dot.gov",
+    "A",
+    "152.122.41.3"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:16 GMT-0500 (Eastern Standard Time)",
+    "stag.seavision.volpe.dot.gov",
+    "CNAME",
+    "d1lfdnnqj01fri.cloudfront.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:16 GMT-0500 (Eastern Standard Time)",
+    "stage-cidrs.cdan.dot.gov",
+    "CNAME",
+    "nhthqnwas369.nhtsa.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:16 GMT-0500 (Eastern Standard Time)",
+    "stage.fra.dot.gov",
+    "CNAME",
+    "fra-global.fra.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:16 GMT-0500 (Eastern Standard Time)",
+    "staging.learn.dot.gov",
+    "A",
+    "162.58.34.226"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:16 GMT-0500 (Eastern Standard Time)",
+    "standards.its.dot.gov",
+    "A",
+    "152.122.41.81"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:16 GMT-0500 (Eastern Standard Time)",
+    "staqsdevext.esc.gov",
+    "A",
+    "162.58.38.43"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:17 GMT-0500 (Eastern Standard Time)",
+    "staqspostprodext.esc.gov",
+    "A",
+    "162.58.38.44"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:17 GMT-0500 (Eastern Standard Time)",
+    "staqsprodext.esc.gov",
+    "A",
+    "162.58.38.42"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:17 GMT-0500 (Eastern Standard Time)",
+    "staqstestext.esc.gov",
+    "A",
+    "162.58.38.41"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:17 GMT-0500 (Eastern Standard Time)",
+    "staqstrainext.esc.gov",
+    "A",
+    "162.58.38.45"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:17 GMT-0500 (Eastern Standard Time)",
+    "statemetrics.nhtsa.gov",
+    "CNAME",
+    "statemetrics.azurewebsites.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:17 GMT-0500 (Eastern Standard Time)",
+    "static.nhtsa.gov",
+    "CNAME",
+    "d1gacuyv2xhfmh.cloudfront.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:17 GMT-0500 (Eastern Standard Time)",
+    "stb.dot.gov",
+    "MX",
+    "lmail.stb.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:17 GMT-0500 (Eastern Standard Time)",
+    "stb.dot.gov",
+    "NS",
+    "edns1.dot.gov. edns2.dot.gov. edns3.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:17 GMT-0500 (Eastern Standard Time)",
+    "stb.dot.gov",
+    "SOA",
+    "600"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:17 GMT-0500 (Eastern Standard Time)",
+    "stbremote.esc.gov",
+    "CNAME",
+    "remote.esc.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:18 GMT-0500 (Eastern Standard Time)",
+    "stg-api.nhtsa.gov",
+    "CNAME",
+    "d9s9ikignjnf9.cloudfront.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:18 GMT-0500 (Eastern Standard Time)",
+    "stg-dredata.nhtsa.gov",
+    "CNAME",
+    "dredata.nhtsa.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:18 GMT-0500 (Eastern Standard Time)",
+    "stg-nstrc.nhtsa.gov",
+    "CNAME",
+    "dredata.nhtsa.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:18 GMT-0500 (Eastern Standard Time)",
+    "stnw.nhtsa.gov",
+    "CNAME",
+    "www.nhtsa.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:18 GMT-0500 (Eastern Standard Time)",
+    "strap.nhtsa.dot.gov",
+    "CNAME",
+    "NHTHQNWAS294.nhtsa.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:19 GMT-0500 (Eastern Standard Time)",
+    "strongports.gov",
+    "NS",
+    "edns1.dot.gov. edns2.dot.gov. edns3.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:19 GMT-0500 (Eastern Standard Time)",
+    "strongports.gov",
+    "SOA",
+    "900"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:19 GMT-0500 (Eastern Standard Time)",
+    "strongports.gov",
+    "AAAA",
+    "2001:19e8:d4:1::20"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:19 GMT-0500 (Eastern Standard Time)",
+    "strongports.gov",
+    "A",
+    "204.238.19.20"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:20 GMT-0500 (Eastern Standard Time)",
+    "survey.bts.gov",
+    "A",
+    "199.79.178.200"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:20 GMT-0500 (Eastern Standard Time)",
+    "swim.volpe.dot.gov",
+    "A",
+    "152.122.1.79"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:20 GMT-0500 (Eastern Standard Time)",
+    "tankcar.bts.gov",
+    "CNAME",
+    "ccdp.bts.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:20 GMT-0500 (Eastern Standard Time)",
+    "tdwr.jccbi.gov",
+    "A",
+    "162.58.35.187"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:20 GMT-0500 (Eastern Standard Time)",
+    "tmcpfs.ops.fhwa.dot.gov",
+    "A",
+    "204.68.194.129"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:20 GMT-0500 (Eastern Standard Time)",
+    "tmip.fhwa.dot.gov",
+    "A",
+    "204.68.194.130"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:21 GMT-0500 (Eastern Standard Time)",
+    "trafficsafetymarketing.gov",
+    "NS",
+    "edns1.dot.gov. edns2.dot.gov. edns3.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:21 GMT-0500 (Eastern Standard Time)",
+    "trafficsafetymarketing.gov",
+    "SOA",
+    "900"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:21 GMT-0500 (Eastern Standard Time)",
+    "trafficsafetymarketing.gov",
+    "A",
+    "204.68.194.196"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:21 GMT-0500 (Eastern Standard Time)",
+    "training-cidrs.cdan.dot.gov",
+    "CNAME",
+    "nhthqnwas371.nhtsa.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:21 GMT-0500 (Eastern Standard Time)",
+    "training-parse.cdan.dot.gov",
+    "A",
+    "204.68.194.117"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "transborder.bts.gov",
+    "CNAME",
+    "apps.bts.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "transerve.dot.gov",
+    "CNAME",
+    "www.redirect.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "transit-safety.fta.dot.gov",
+    "A",
+    "152.122.41.175"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "transit.dot.gov",
+    "CNAME",
+    "www.fta.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "transitapp.ost.dot.gov",
+    "CNAME",
+    "OSTHQWWAS003VG.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "transitapptraining.ost.dot.gov",
+    "CNAME",
+    "OSTHQWWAS003VG.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "transportation.gov",
+    "A",
+    "204.68.196.12"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "transtats.bts.gov",
+    "A",
+    "204.68.194.70"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "triprs.nhtsa.dot.gov",
+    "CNAME",
+    "NHTHQNWAS294.nhtsa.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "tsi.dot.gov",
+    "SOA",
+    "86400"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "tsi.dot.gov",
+    "NS",
+    "dotazedns002vg.ad.dot.gov. idns1.dot.gov. idns2.dot.gov. idns3.dot.gov. idns4.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "tsp.dot.gov",
+    "SOA",
+    "86400"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "tsp.dot.gov",
+    "NS",
+    "dotazedns002vg.ad.dot.gov. idns1.dot.gov. idns2.dot.gov. idns3.dot.gov. idns4.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "upa.dot.gov",
+    "A",
+    "204.68.194.226"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "upa.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:226"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "usmma.edu",
+    "NS",
+    "ns10.dnsmadeeasy.com. ns11.dnsmadeeasy.com. ns12.dnsmadeeasy.com. ns13.dnsmadeeasy.com. ns14.dnsmadeeasy.com. ns15.dnsmadeeasy.com."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "usmma.edu",
+    "SOA",
+    "180"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "utc.dot.gov",
+    "CNAME",
+    "www.redirect.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "vbulletin.phmsa.dot.gov",
+    "AAAA",
+    "2001:19e8:d::204:68:194:189"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "vbulletin.phmsa.dot.gov",
+    "A",
+    "204.68.194.189"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "vdi-dr.dot.gov",
+    "A",
+    "152.120.215.10"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:22 GMT-0500 (Eastern Standard Time)",
+    "vdi.dot.gov",
+    "CNAME",
+    "vdi-prod.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:23 GMT-0500 (Eastern Standard Time)",
+    "vinrcl.safercar.gov",
+    "CNAME",
+    "vinrcl.safercar.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:23 GMT-0500 (Eastern Standard Time)",
+    "voa.marad.dot.gov",
+    "A",
+    "204.238.19.20"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:23 GMT-0500 (Eastern Standard Time)",
+    "voa.marad.dot.gov",
+    "AAAA",
+    "2001:19e8:d4:1::20"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:23 GMT-0500 (Eastern Standard Time)",
+    "volpe.dot.gov",
+    "SOA",
+    "300"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:23 GMT-0500 (Eastern Standard Time)",
+    "volpe.dot.gov",
+    "NS",
+    "ens1.volpe.dot.gov. ens2.volpe.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:23 GMT-0500 (Eastern Standard Time)",
+    "volpedb1.volpe.dot.gov",
+    "A",
+    "152.122.41.135"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:23 GMT-0500 (Eastern Standard Time)",
+    "volpevtc.volpe.dot.gov",
+    "A",
+    "152.122.1.190"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:23 GMT-0500 (Eastern Standard Time)",
+    "vpic.nhtsa.dot.gov",
+    "CNAME",
+    "nhthqnwas861.ext.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:23 GMT-0500 (Eastern Standard Time)",
+    "vpiclist.cdan.dot.gov",
+    "A",
+    "204.68.194.234"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:23 GMT-0500 (Eastern Standard Time)",
+    "vpicpub.nhtsa.gov",
+    "CNAME",
+    "vpicpub.nhtsa.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:23 GMT-0500 (Eastern Standard Time)",
+    "vpicpubportal.nhtsa.gov",
+    "CNAME",
+    "vpicpub.nhtsa.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:23 GMT-0500 (Eastern Standard Time)",
+    "vrs.volpe.dot.gov",
+    "A",
+    "152.122.41.222"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:23 GMT-0500 (Eastern Standard Time)",
+    "webapi.nhtsa.gov",
+    "A",
+    "204.68.194.196"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:23 GMT-0500 (Eastern Standard Time)",
+    "webapps.marad.dot.gov",
+    "AAAA",
+    "2001:19e8:d4:1::20"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:23 GMT-0500 (Eastern Standard Time)",
+    "webapps.marad.dot.gov",
+    "A",
+    "204.238.19.20"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:23 GMT-0500 (Eastern Standard Time)",
+    "webeoc.dot.gov",
+    "CNAME",
+    "OSTHQNWAS093.dot.gov."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:24 GMT-0500 (Eastern Standard Time)",
+    "websiteaccessibility.dot.gov",
+    "A",
+    "204.68.195.14"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:24 GMT-0500 (Eastern Standard Time)",
+    "www-esv.nhtsa.dot.gov",
+    "A",
+    "204.68.194.196"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:24 GMT-0500 (Eastern Standard Time)",
+    "www-fars.nhtsa.dot.gov",
+    "A",
+    "204.68.194.234"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:24 GMT-0500 (Eastern Standard Time)",
+    "www-nrd.nhtsa.dot.gov",
+    "CNAME",
+    "www-nrd.nhtsa.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:24 GMT-0500 (Eastern Standard Time)",
+    "www-odi.nhtsa.dot.gov",
+    "CNAME",
+    "vinrcl.safercar.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:24 GMT-0500 (Eastern Standard Time)",
+    "www.tsi.dot.gov",
+    "CNAME",
+    "www.redirect.dot.gov.edgekey.net."
+  ],
+  [
+    "Thu Mar 07 2019 12:24:24 GMT-0500 (Eastern Standard Time)",
+    "www1.oig.dot.gov",
+    "A",
+    "204.68.194.97"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:24 GMT-0500 (Eastern Standard Time)",
+    "www2.oig.dot.gov",
+    "A",
+    "204.68.194.40"
+  ],
+  [
+    "Thu Mar 07 2019 12:24:24 GMT-0500 (Eastern Standard Time)",
+    "wxde.fhwa.dot.gov",
+    "A",
+    "74.254.188.153"
+  ]
+]

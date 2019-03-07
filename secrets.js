@@ -1,1 +1,1 @@
-module.exports = "N0r0s#t!";
+module.exports = "feETosYKhz3JL6kJIb5EDCCBGI";
