@@ -5,6 +5,7 @@ const jsonDiff = require("json-diff");
 const chalk = require("chalk");
 const db = require("./sqldiffs");
 const bettersql = require("./bettersql");
+const { exec } = require("child_process");
 
 const TARGET_TYPES = ["A", "NS", "AAAA", "MX", "SOA", "CNAME"];
 const SEPARATOR =
@@ -15,7 +16,17 @@ try {
   data = require("./logs");
 } catch (e) {}
 
-const sendEmail = () => {};
+const sendEmail = text => {
+  exec(
+    `mail -s "It's alive!" amanda.evans.ctr@dot.gov <<< '${text}`,
+    (err, stdout, stderr) => {
+      if (err) {
+        console.log(err);
+        return;
+      }
+    }
+  );
+};
 
 const writeToFile = (obj, file) => {
   const text = typeof obj === "string" ? obj : JSON.stringify(obj, null, 2);
@@ -126,6 +137,7 @@ const createSummary = () => {
   }
 
   console.log(summary);
+  sendEmail(summary);
 };
 
 const showAnswerTypes = () => {
@@ -149,10 +161,4 @@ const showAnswerTypes = () => {
   }
 };
 
-if (require.main === module) {
-  //getRecords();
-  //compareRecords();
-  //showAnswerTypes();
-  //cleanRecords();
-  createSummary();
-}
+createSummary();
