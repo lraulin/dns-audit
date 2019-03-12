@@ -1,58 +1,35 @@
-DROP 
-  TABLE IF EXISTS temp.a;
-DROP 
-  TABLE IF EXISTS temp.b;
-CREATE TEMP TABLE temp.b AS
-SELECT
-  queried_at,
-  datetime,
-  domain,
-  type,
-  answers
-FROM
-  records
+DROP TABLE IF EXISTS temp.a;
+CREATE TEMP TABLE a AS
+SELECT record_timestamp, domain_id, type_id, record_values
+FROM tbl_record
 WHERE 
-  queried_at = (
+  run_id = (
     SELECT
-  MAX(queried_at)
+  MAX(run_id)
 FROM
-  records
-  );
-CREATE TEMP TABLE temp.a AS
-SELECT
-  queried_at,
-  datetime,
-  domain,
-  type,
-  answers
-FROM
-  records
+  tbl_record
 WHERE 
-  queried_at = (
-    SELECT
-  MAX(queried_at)
-FROM
-  records
-WHERE 
-      queried_at NOT IN (
+      run_id NOT IN (
         SELECT
-  MAX(queried_at)
+  MAX(run_id)
 FROM
-  records
+  tbl_record
       )
   );
-SELECT
-  a.queried_at,
-  b.queried_at,
-  a.domain,
-  a.type,
-  a.datetime,
-  a.answers,
-  b.datetime,
-  b.answers
-FROM
-  a
-  INNER JOIN b ON a.domain = b.domain
-    AND a.type = b.type
+
+DROP TABLE IF EXISTS temp.b;
+CREATE TEMP TABLE b AS
+SELECT record_timestamp, domain_id, type_id, record_values
+FROM tbl_record
 WHERE 
-  a.answers <> b.answers;
+  run_id = (
+    SELECT
+  MAX(run_id)
+FROM
+  tbl_record
+  );
+
+SELECT a.domain_id, a.type_id, a.record_timestamp AS timestamp_A, a.record_values AS values_A, b.record_values AS values_B, b.record_values AS timestamp_B
+FROM a
+  INNER JOIN b on a.domain_id = b.domain_id AND a.type_id = b.type_id
+WHERE values_A <> values_B;

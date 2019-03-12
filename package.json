@@ -1,20 +1,17 @@
 {
   "name": "soa-node",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "license": "MIT",
+  "bin": {
+    "dns-audit": "bin/dns-audit"
+  },
   "scripts": {
-    "start": "node index.js"
+    "start": "node src/index.js"
   },
   "dependencies": {
-    "@types/node": "11.10.4",
     "better-sqlite3": "5.4.0",
-    "chalk": "2.4.2",
-    "json-diff": "0.5.4",
     "node-dig-dns": "0.2.10",
-    "nodemailer": "5.1.1",
-    "sqlite3": "4.0.6",
-    "tslint": "5.13.1",
-    "typescript": "3.3.3333"
+    "sqlite3": "4.0.6"
   }
 }
