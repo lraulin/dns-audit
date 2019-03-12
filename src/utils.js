@@ -16,7 +16,7 @@ const email = ({
 }) => {
   // Send email with Unix mailx. Assumes Sendmail or Postfix is configured.
   exec(
-    `mail -s "${subject}" ${to.join(" ")} <<< '${body}`,
+    `mail -s '${subject}' ${to.join(" ")} <<< '${body}'`,
     (err, stdout, stderr) => {
       if (err) {
         console.log(err);
