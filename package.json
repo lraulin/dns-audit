@@ -1,16 +1,17 @@
 {
-  "name": "soa-node",
+  "name": "dns-audit",
   "version": "1.0.0",
   "main": "src/index.js",
   "license": "MIT",
   "bin": {
-    "dns-audit": "bin/dns-audit"
+    "dns-audit": "bin/dns-audit.js"
   },
   "scripts": {
     "start": "node src/index.js"
   },
   "dependencies": {
     "better-sqlite3": "5.4.0",
+    "json-stable-stringify": "1.0.1",
     "node-dig-dns": "0.2.10",
     "sqlite3": "4.0.6"
   }

@@ -1,0 +1,31 @@
+==============================================================
+sharetheroadsafely.gov:
+   1 A record added
+   3 NS records added
+   1 SOA record added
+
+;; WHEN: Wed Mar 13 12:52:49 EDT 2019
+[No records of target types found]
+
+;; WHEN: Wed Mar 13 12:54:12 EDT 2019
+sharetheroadsafely.gov. 3518    IN      NS      edns3.dot.gov.
+sharetheroadsafely.gov. 3518    IN      NS      edns2.dot.gov.
+sharetheroadsafely.gov. 3518    IN      NS      edns1.dot.gov.
+sharetheroadsafely.gov. 3518    IN      SOA     edns1.dot.gov. hostmaster.dot.gov. 2007168379 3600 1200 604800 900
+sharetheroadsafely.gov. 3518    IN      A       52.5.106.74
+
+==============================================================
+trafficsafetymarketing.gov:
+   1 A record added
+   3 NS records added
+   1 SOA record added
+
+;; WHEN: Wed Mar 13 12:52:55 EDT 2019
+[No records of target types found]
+
+;; WHEN: Wed Mar 13 12:54:13 EDT 2019
+trafficsafetymarketing.gov. 3523 IN     NS      edns3.dot.gov.
+trafficsafetymarketing.gov. 3523 IN     NS      edns1.dot.gov.
+trafficsafetymarketing.gov. 3523 IN     NS      edns2.dot.gov.
+trafficsafetymarketing.gov. 3523 IN     SOA     edns1.dot.gov. hostmaster.dot.gov. 17556 3600 1200 604800 900
+trafficsafetymarketing.gov. 223 IN      A       204.68.194.196

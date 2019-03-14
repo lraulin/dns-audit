@@ -1,8 +1,9 @@
 "use strict";
 
 const dig = require("node-dig-dns");
-const { email } = require("./utils");
+const stringify = require("json-stable-stringify");
 const Database = require("better-sqlite3");
+const { email } = require("./utils");
 const recipients = require("./recipients");
 
 const db = new Database(`${__dirname}/data.db`);
@@ -85,7 +86,7 @@ const getDomainRecords = async (runId, domain) => {
     insertIntoTblRecord({
       runId: runId,
       domainId: domainIdLookup[domain],
-      records: JSON.stringify(parseDigForRecordValues(raw)),
+      records: stringify(parseDigForRecordValues(raw)),
       raw
     });
   } catch (e) {
@@ -108,9 +109,11 @@ const getRecordsForAllDomains = async () => {
 
 const parseDigGetAnswers = digOutput => {
   const lines = digOutput.split("\n");
-  const answers = {};
+  let outputLines = [];
+
   let inAnswerSection = false;
   for (let line of lines) {
+    if (line.includes("WHEN")) outputLines.push(line);
     if (inAnswerSection) {
       if (line === "") break;
       else {
@@ -118,20 +121,15 @@ const parseDigGetAnswers = digOutput => {
         const recordType = answer[3];
         const value = answer[4];
         if (types.includes(recordType)) {
-          if (!answers[recordType]) answers[recordType] = [];
-          answers[recordType].push(line);
+          outputLines.push(line);
         }
       }
     }
     if (line === ";; ANSWER SECTION:") inAnswerSection = true;
   }
-  return answers;
-};
-
-const unique = (arr1, arr2) => {
-  const unique1 = arr1.filter(o => arr2.indexOf(o) === -1);
-  const unique2 = arr2.filter(o => arr1.indexOf(o) === -1);
-  return unique1.concat(unique2);
+  if (outputLines.length === 1)
+    outputLines.push("[No records of target types found]");
+  return outputLines.join("\n");
 };
 
 const findMismatches = () => {
@@ -151,53 +149,56 @@ const findMismatches = () => {
   if (rows.length) {
     let message = "";
     for (let row of rows) {
-      message += domainIdLookup[row.domain_id] + ":\n";
+      message +=
+        "==============================================================\n" +
+        domainIdLookup[row.domain_id] +
+        ":\n";
       const values_A = JSON.parse(row.values_A);
       const values_B = JSON.parse(row.values_B);
-      const answerLinesA = parseDigGetAnswers(row.raw_A);
-      const answerLinesB = parseDigGetAnswers(row.raw_B);
-      console.log(answerLinesA);
-      console.log(answerLinesB);
 
       const allTypes = new Set(
         Object.keys(values_A).concat(Object.keys(values_B).sort())
       );
-      console.log(allTypes);
 
       for (let type of allTypes) {
         if (!values_A[type]) values_A[type] = [];
         if (!values_B[type]) values_B[type] = [];
 
         if (values_A[type].join(" ") !== values_B[type].join(" ")) {
-          const change = values_A[type].length - values_B[type].length;
-          if (change > 0) {
-            message += `${change} ${type} record${
-              change > 1 ? "s" : ""
-            } deleted\n`;
-          } else if (change < 0) {
-            message += `${Math.abs(change)} ${type} record${
-              change < -1 ? "s" : ""
-            } added\n`;
+          const uniqueA = values_A[type].filter(
+            e => values_B[type] && !values_B[type].includes(e)
+          );
+          const uniqueB = values_B[type].filter(
+            e => values_A[type] && !values_A[type].includes(e)
+          );
+          const changeCount = {
+            added:
+              uniqueB.length > uniqueA.length
+                ? uniqueB.length - uniqueA.length
+                : 0,
+            deleted:
+              uniqueA.length > uniqueB.length
+                ? uniqueA.length - uniqueB.length
+                : 0,
+            changed: Math.min(uniqueA.length, uniqueB.length)
+          };
+          for (let key in changeCount) {
+            if (changeCount[key])
+              message += `   ${changeCount[key]} ${type} record${
+                changeCount[key] > 1 ? "s" : ""
+              } ${key}\n`;
           }
-
-          // message +=
-          //   `${differenceType} in ${type} record(s) for ${
-          //     domainIdLookup[row.domain_id]
-          //   }:\n` +
-          //   `  ${row.timestamp_A}    ${
-          //     values_A[type] ? values_A[type].replace("|", " ") : "No records"
-          //   }\n` +
-          //   `  ${row.timestamp_B}    ${
-          //     values_B[type] ? values_B[type].replace("|", " ") : "No records"
-          //   }\n\n`;
         }
       }
-      // message += "\n";
-      // message += row.raw_A += "\n";
-      // message += row.raw_B +=
-      //   "\n\n==============================================================\n";
+      message += "\n";
+      message += parseDigGetAnswers(row.raw_A) + "\n\n";
+      message += parseDigGetAnswers(row.raw_B) + "\n\n";
     }
-    console.log(message);
+    if (message) {
+      console.log(message);
+    } else {
+      console.log("No changes found.");
+    }
     // console.log(message);
     // email({
     //   subject: "DNS Log Discrepancy Report",
@@ -205,9 +206,26 @@ const findMismatches = () => {
     //   to: recipients
     // });
   } else {
-    console.log("No discrepancies found.");
+    console.log("\nNo discrepancies found.");
   }
 };
 
-getRecordsForAllDomains();
-findMismatches();
+const cleanUp = () => {
+  const hoursToKeep = 24;
+  const cutoffEpochMs = new Date().getTime() - hoursToKeep * 60 * 60 * 1000;
+  try {
+    db.prepare(
+      "DELETE FROM tbl_record WHERE run_id <( SELECT run_id FROM tbl_run_datetime WHERE run_datetime = ( SELECT MAX(run_datetime) FROM tbl_run_datetime WHERE run_datetime < ?) );"
+    ).run(cutoffEpochMs);
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+const main = async () => {
+  await getRecordsForAllDomains();
+  findMismatches();
+  cleanUp();
+};
+
+main();
