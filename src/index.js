@@ -68,7 +68,7 @@ const parseDigForRecordValues = digOutput => {
       else {
         const answer = line.split(/\s/);
         const recordType = answer[3];
-        const value = answer[4];
+        const value = answer.slice(4).join(" ");
         if (types.includes(recordType)) {
           if (!answers[recordType]) answers[recordType] = [];
           answers[recordType].push(value);
