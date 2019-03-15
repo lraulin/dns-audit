@@ -54,6 +54,10 @@ const sqlInsertIntoTblRecord = db.prepare(
 const insertIntoTblRecord = ({ runId, domainId, records, raw }) =>
   sqlInsertIntoTblRecord.run(runId, domainId, records, raw).lastInsertRowid;
 
+const getLastTwoRunTimes = () => {
+  const rows = db.prepare("SELECT run_datetime FROM ");
+};
+
 const parseDigForRecordValues = digOutput => {
   const lines = digOutput.split("\n");
   const answers = {};
@@ -199,12 +203,12 @@ const findMismatches = () => {
     } else {
       console.log("No changes found.");
     }
-    // console.log(message);
-    // email({
-    //   subject: "DNS Log Discrepancy Report",
-    //   body: message,
-    //   to: recipients
-    // });
+    console.log(message);
+    email({
+      subject: "DNS Log Discrepancy Report",
+      body: message,
+      to: ["leeraulin@gmail.com", "amanda.evans.ctr@dot.gov"]
+    });
   } else {
     console.log("\nNo discrepancies found.");
   }
@@ -225,7 +229,7 @@ const cleanUp = () => {
 const main = async () => {
   await getRecordsForAllDomains();
   findMismatches();
-  cleanUp();
+  //cleanUp();
 };
 
 main();
