@@ -1,10 +1,15 @@
 "use strict";
 
+const { readFileSync } = require("fs");
 const dig = require("node-dig-dns");
 const stringify = require("json-stable-stringify");
 const Database = require("better-sqlite3");
-const { email } = require("./utils");
-const recipients = require("./recipients");
+const { email, readFile } = require("./utils");
+
+const emailList = readFileSync(
+  require.resolve("../config/emails.txt"),
+  "utf8"
+).split("\n");
 
 const db = new Database(`${__dirname}/data.db`);
 
@@ -207,7 +212,7 @@ const findMismatches = () => {
     email({
       subject: "DNS Log Discrepancy Report",
       body: message,
-      to: ["leeraulin@gmail.com", "amanda.evans.ctr@dot.gov"]
+      to: emailList
     });
   } else {
     console.log("\nNo discrepancies found.");
