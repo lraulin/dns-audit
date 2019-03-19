@@ -4,7 +4,7 @@ const { readFileSync } = require("fs");
 const dig = require("node-dig-dns");
 const stringify = require("json-stable-stringify");
 const Database = require("better-sqlite3");
-const { email, readFile } = require("./utils");
+const { email } = require("./utils");
 
 // IP for dig command
 const server = "152.120.225.240";
@@ -103,7 +103,9 @@ const parseDigForRecordValues = digOutput => {
 
 const digWhenLine = digOutput => digOutput.match(/;; WHEN: .*/)[0];
 
-// E
+const digAnswerLine = ({ answerSection, value }) =>
+  answerSection.split("\n").find(line => line.includes(value));
+
 const getDomainRecords = async (runId, domain) => {
   try {
     // Raw output of dig command.
@@ -134,94 +136,183 @@ const getRecordsForAllDomains = async () => {
 };
 
 const filterAnswers = answerSection =>
+  // Remove lines from answer section concerning irrelevant record types
   answerSection
     .split("\n")
     .filter(line => types.includes(line.split(/\s/)[3]))
     .join("\n");
 
-const rowMessage = row => {
-  let message =
-    "==============================================================\n" +
-    domainIdLookup[row.domain_id] +
-    ":\n";
-  const values_A = JSON.parse(row.values_A);
-  const values_B = JSON.parse(row.values_B);
-
-  // Unique list of all record types present in either run.
-  const allTypes = Array.from(
-    new Set(Object.keys(values_A).concat(Object.keys(values_B).sort()))
-  );
-
-  allTypes.forEach(type => {
-    if (!values_A[type]) values_A[type] = [];
-    if (!values_B[type]) values_B[type] = [];
-
-    // If values are not the same
-    if (values_A[type].join(" ") !== values_B[type].join(" ")) {
-      // Values in A not in B
-      const uniqueA = values_A[type].filter(e => !values_B[type].includes(e));
-      // Values in B not in a
-      const uniqueB = values_B[type].filter(e => !values_A[type].includes(e));
-      const changeCount = {
-        added:
-          uniqueA.length < uniqueB.length ? uniqueB.length - uniqueA.length : 0,
-        deleted:
-          uniqueA.length > uniqueB.length ? uniqueA.length - uniqueB.length : 0,
-        changed: Math.min(uniqueA.length, uniqueB.length)
-      };
-      Object.keys(changeCount).forEach(key => {
-        if (changeCount[key])
-          message += `   ${changeCount[key]} ${type} record${
-            changeCount[key] > 1 ? "s" : ""
-          } ${key}\n`;
-      });
-    }
-  });
-  message += `\n${digWhenLine(row.raw_A)}\n${filterAnswers(
-    digAnswerSection(row.raw_A)
-  )}`;
-  message += `\n\n${digWhenLine(row.raw_A)}\n${filterAnswers(
-    digAnswerSection(row.raw_B)
-  )}`;
-  return message;
-};
-
 const createMessage = rows => {
-  let message = `Comparing last two batch dig queries initiated at:
-  ${runATime}
-  ${runBTime}
+  // Object to store change counts. Key: type, value: {key: change type, value: count}
+  const totalChanges = {};
+  const rowMessage = row => {
+    // TODO: SRP: Separate extracting data and displaying data
+    let message =
+      "==============================================================\n" +
+      domainIdLookup[row.domain_id] +
+      ":\n";
+    const values_A = JSON.parse(row.values_A);
+    const values_B = JSON.parse(row.values_B);
 
-`;
+    // Unique list of all record types present in either run.
+    const allTypes = Array.from(
+      new Set(Object.keys(values_A).concat(Object.keys(values_B).sort()))
+    );
+
+    allTypes.forEach(type => {
+      if (!values_A[type]) values_A[type] = [];
+      if (!values_B[type]) values_B[type] = [];
+
+      // If values are not the same
+      if (values_A[type].join(" ") !== values_B[type].join(" ")) {
+        // Values in A not in B
+        const uniqueA = values_A[type].filter(e => !values_B[type].includes(e));
+        // Values in B not in a
+        const uniqueB = values_B[type].filter(e => !values_A[type].includes(e));
+        const changeCount = {
+          added:
+            uniqueA.length < uniqueB.length
+              ? uniqueB.length - uniqueA.length
+              : 0,
+          deleted:
+            uniqueA.length > uniqueB.length
+              ? uniqueA.length - uniqueB.length
+              : 0,
+          changed: Math.min(uniqueA.length, uniqueB.length)
+        };
+
+        Object.keys(changeCount).forEach(key => {
+          if (changeCount[key]) {
+            // Add to message, ie "1 A record added"
+            message += `   ${changeCount[key]} ${type} record${
+              changeCount[key] > 1 ? "s" : ""
+            } ${key}\n`;
+
+            // Add to total counts
+            if (!totalChanges[type]) totalChanges[type] = {};
+            if (!totalChanges[type][key]) totalChanges[type][key] = 0;
+            totalChanges[type][key] += changeCount[key];
+          }
+        });
+      }
+    });
+    message += `\n${digWhenLine(row.raw_A)}\n${filterAnswers(
+      digAnswerSection(row.raw_A)
+    )}`;
+    message += `\n\n${digWhenLine(row.raw_A)}\n${filterAnswers(
+      digAnswerSection(row.raw_B)
+    )}`;
+    return message;
+  };
+  let message =
+    "DNS Descrepency monitoring\n" +
+    "Comparing last two batch dig queries initiated at:\n" +
+    `  ${runATime}\n  ${runBTime}\n\n`;
 
   message += rows.map((row, message) => rowMessage(row, message)).join("\n");
   return message;
 };
 
-const findMismatches = () => {
+const analyzeMismatches = rows => {
+  const changes = [];
+  rows.forEach(row => {
+    const domain = domainIdLookup[row.domain_id];
+    const values_A = JSON.parse(row.values_A);
+    const values_B = JSON.parse(row.values_B);
+    const answerSectionA = digAnswerSection(row.raw_A);
+    const answerSectionB = digAnswerSection(row.raw_B);
+
+    // Unique list of all record types present in either run.
+    const allTypes = Array.from(
+      new Set(Object.keys(values_A).concat(Object.keys(values_B).sort()))
+    );
+
+    // Get timestamps for both records
+    const whenLineA = digWhenLine(row.raw_A);
+    const whenLineB = digWhenLine(row.raw_B);
+
+    allTypes.forEach(type => {
+      // Skip if there are no records for this type
+      if (!values_A[type] && !values_B[type]) return;
+
+      // If there are no records for a type, set the value to an empty array
+      if (!values_A[type]) values_A[type] = [];
+      if (!values_B[type]) values_B[type] = [];
+
+      // Remove matching record values
+      const uniqueA = values_A[type].filter(
+        value => !values_B[type].includes(value)
+      );
+      const uniqueB = values_B[type].filter(
+        value => !values_A[type].includes(value)
+      );
+
+      const len = Math.max(uniqueA.length, uniqueB.length);
+
+      for (let i = 0; i < len; i++) {
+        const change = {
+          domain,
+          type,
+          whenLineA,
+          whenLineB
+        };
+
+        change.changeType =
+          uniqueA[i] && uniqueB[i]
+            ? "change"
+            : uniqueB[i]
+            ? "addition"
+            : "deletion";
+        change.valuesA = uniqueA[i] || null;
+        change.valuesB = uniqueB[i] || null;
+        change.digLineA = change.valuesA
+          ? digAnswerLine({
+              answerSection: answerSectionA,
+              value: change.valuesA
+            })
+          : null;
+        change.digLineB = change.valuesB
+          ? digAnswerLine({
+              answerSection: answerSectionB,
+              value: change.valuesB
+            })
+          : null;
+        changes.push(change);
+      }
+    });
+  });
+  console.log(changes);
+  return changes;
+};
+
+const getMismatches = () => {
   const sqlCreateTempTables = [
     "DROP TABLE IF EXISTS temp.a;",
-    "CREATE TEMP TABLE a AS SELECT domain_id, record_values, raw FROM tbl_record WHERE run_id =( SELECT MAX(run_id) FROM tbl_record WHERE run_id NOT IN ( SELECT MAX(run_id) FROM tbl_record) );",
+    "CREATE TEMP TABLE a AS SELECT record_id, domain_id, record_values, raw FROM tbl_record WHERE run_id =( SELECT MAX(run_id) FROM tbl_record WHERE run_id NOT IN ( SELECT MAX(run_id) FROM tbl_record) );",
     "DROP TABLE IF EXISTS temp.b;",
-    "CREATE TEMP TABLE b AS SELECT domain_id, record_values, raw FROM tbl_record WHERE run_id =( SELECT MAX(run_id) FROM tbl_record);"
+    "CREATE TEMP TABLE b AS SELECT record_id, domain_id, record_values, raw FROM tbl_record WHERE run_id =( SELECT MAX(run_id) FROM tbl_record);"
   ];
   const sqlGetMismatches =
-    "SELECT a.domain_id, a.record_values AS values_A, a.raw as raw_A, b.record_values AS values_B, b.record_values AS timestamp_B, b.raw AS raw_B FROM a INNER JOIN b on a.domain_id = b.domain_id WHERE values_A <> values_B;";
+    "SELECT a.domain_id, a.record_id AS record_id_a, a.record_values AS values_A, a.raw as raw_A, b.record_id AS record_id_b, b.record_values AS values_B, b.raw AS raw_B FROM a INNER JOIN b on a.domain_id = b.domain_id WHERE values_A <> values_B;";
   const rows = db.transaction(() => {
     sqlCreateTempTables.forEach(s => db.prepare(s).run());
     return db.prepare(sqlGetMismatches).all();
   })();
+  console.log(rows.length);
 
-  const message = createMessage(rows);
-  if (message) {
-    console.log(message);
-    email({
-      subject: "DNS Log Discrepancy Report",
-      body: message,
-      to: emailList
-    });
-  } else {
-    console.log("No changes found.");
-  }
+  analyzeMismatches(rows);
+
+  // const message = createMessage(rows);
+  // if (message) {
+  //   console.log(message);
+  //   email({
+  //     subject: "DNS Log Discrepancy Report",
+  //     body: message,
+  //     to: emailList
+  //   });
+  // } else {
+  //   console.log("No changes found.");
+  // }
 };
 
 const cleanUp = () => {
@@ -237,8 +328,8 @@ const cleanUp = () => {
 };
 
 const main = async () => {
-  await getRecordsForAllDomains();
-  findMismatches();
+  //await getRecordsForAllDomains();
+  getMismatches();
   //cleanUp();
 };
 
