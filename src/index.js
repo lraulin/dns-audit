@@ -142,77 +142,6 @@ const filterAnswers = answerSection =>
     .filter(line => types.includes(line.split(/\s/)[3]))
     .join("\n");
 
-const createMessage = rows => {
-  // Object to store change counts. Key: type, value: {key: change type, value: count}
-  const totalChanges = {};
-  const rowMessage = row => {
-    // TODO: SRP: Separate extracting data and displaying data
-    let message =
-      "==============================================================\n" +
-      domainIdLookup[row.domain_id] +
-      ":\n";
-    const values_A = JSON.parse(row.values_A);
-    const values_B = JSON.parse(row.values_B);
-
-    // Unique list of all record types present in either run.
-    const allTypes = Array.from(
-      new Set(Object.keys(values_A).concat(Object.keys(values_B).sort()))
-    );
-
-    allTypes.forEach(type => {
-      if (!values_A[type]) values_A[type] = [];
-      if (!values_B[type]) values_B[type] = [];
-
-      // If values are not the same
-      if (values_A[type].join(" ") !== values_B[type].join(" ")) {
-        // Values in A not in B
-        const uniqueA = values_A[type].filter(e => !values_B[type].includes(e));
-        // Values in B not in a
-        const uniqueB = values_B[type].filter(e => !values_A[type].includes(e));
-        const changeCount = {
-          added:
-            uniqueA.length < uniqueB.length
-              ? uniqueB.length - uniqueA.length
-              : 0,
-          deleted:
-            uniqueA.length > uniqueB.length
-              ? uniqueA.length - uniqueB.length
-              : 0,
-          changed: Math.min(uniqueA.length, uniqueB.length)
-        };
-
-        Object.keys(changeCount).forEach(key => {
-          if (changeCount[key]) {
-            // Add to message, ie "1 A record added"
-            message += `   ${changeCount[key]} ${type} record${
-              changeCount[key] > 1 ? "s" : ""
-            } ${key}\n`;
-
-            // Add to total counts
-            if (!totalChanges[type]) totalChanges[type] = {};
-            if (!totalChanges[type][key]) totalChanges[type][key] = 0;
-            totalChanges[type][key] += changeCount[key];
-          }
-        });
-      }
-    });
-    message += `\n${digWhenLine(row.raw_A)}\n${filterAnswers(
-      digAnswerSection(row.raw_A)
-    )}`;
-    message += `\n\n${digWhenLine(row.raw_A)}\n${filterAnswers(
-      digAnswerSection(row.raw_B)
-    )}`;
-    return message;
-  };
-  let message =
-    "DNS Descrepency monitoring\n" +
-    "Comparing last two batch dig queries initiated at:\n" +
-    `  ${runATime}\n  ${runBTime}\n\n`;
-
-  message += rows.map((row, message) => rowMessage(row, message)).join("\n");
-  return message;
-};
-
 const analyzeMismatches = rows => {
   const changes = [];
   rows.forEach(row => {
@@ -281,7 +210,6 @@ const analyzeMismatches = rows => {
       }
     });
   });
-  console.log(changes);
   return changes;
 };
 
@@ -298,22 +226,61 @@ const getMismatches = () => {
     sqlCreateTempTables.forEach(s => db.prepare(s).run());
     return db.prepare(sqlGetMismatches).all();
   })();
-  console.log(rows.length);
-
-  analyzeMismatches(rows);
-
-  // const message = createMessage(rows);
-  // if (message) {
-  //   console.log(message);
-  //   email({
-  //     subject: "DNS Log Discrepancy Report",
-  //     body: message,
-  //     to: emailList
-  //   });
-  // } else {
-  //   console.log("No changes found.");
-  // }
+  return rows;
 };
+
+const createMessage = conflicts => {
+  console.log(conflicts);
+  let title = "DNS Descrepency monitoring";
+  const fillerLength = Math.floor((80 - title.length) / 2);
+  const filler = " ".repeat(fillerLength);
+  const bar = "=".repeat(80) + "\n";
+  title = bar + filler + title + filler + "\n" + bar;
+  let message =
+    title +
+    "Comparing last two batch dig queries initiated at:\n" +
+    `  ${runATime}\n  ${runBTime}\n\n`;
+
+  // Get count of additions, deletions, and changes per record type
+  const counts = {};
+  conflicts.forEach(conflict => {
+    if (!counts[conflict.type]) counts[conflict.type] = {};
+    if (!counts[conflict.type][conflict.changeType]) {
+      counts[conflict.type][conflict.changeType] = 1;
+    } else {
+      counts[conflict.type][conflict.changeType]++;
+    }
+  });
+
+  message += "Summary:\n";
+  Object.keys(counts).forEach(type => {
+    message += `  ${type}: `.padEnd(9);
+    Object.keys(counts[type]).forEach(changeType => {
+      const ending = counts[type][changeType] > 1 ? "s" : "";
+      message += `  ${
+        counts[type][changeType]
+      } ${changeType}${ending}\n`.padEnd(13);
+    });
+  });
+
+  conflicts.forEach(conflict => {
+    message +=
+      `${conflict.changeType} in ${conflict.domain}\n` +
+      `  ${conflict.whenLineA}\n` +
+      `  ${conflict.digLineA} \n` +
+      `  ${conflict.whenLineB}\n` +
+      `  ${conflict.digLineB}\n\n`;
+  });
+  console.log(message);
+  return message;
+};
+
+const sendEmail = body =>
+  email({
+    subject: "DNS Log Discrepancy Report",
+    body,
+    to: emailList
+  });
 
 const cleanUp = () => {
   const hoursToKeep = 24;
@@ -329,7 +296,9 @@ const cleanUp = () => {
 
 const main = async () => {
   //await getRecordsForAllDomains();
-  getMismatches();
+  const recordRows = getMismatches();
+  const conflicts = analyzeMismatches(recordRows);
+  const message = createMessage(conflicts);
   //cleanUp();
 };
 
