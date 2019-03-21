@@ -1,4 +1,5 @@
 const { exec } = require("child_process");
+const { readFileSync } = require("fs");
 
 // Read email list from config file
 const getEmails = () =>
