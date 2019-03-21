@@ -4,6 +4,7 @@ const { getMismatches, cleanUp } = require("./sqlite");
 const { digAllDomains } = require("./dig");
 const { analyzeMismatches } = require("./analyzeMismatches");
 const { createMessage } = require("./report");
+const { sendEmail } = require("./email");
 
 // IP for dig command
 const server = "152.120.225.240";
@@ -13,7 +14,7 @@ const main = async () => {
   const recordRows = getMismatches();
   const conflicts = analyzeMismatches(recordRows);
   const message = createMessage(conflicts, recordRows);
-  console.log(message);
+  sendEmail(message);
   //cleanUp();
 };
 
