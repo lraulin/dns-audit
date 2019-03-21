@@ -41,16 +41,17 @@ module.exports.createMessage = (conflicts, mismatchRecords) => {
 
   // Display count of type of changes per record type
   Object.keys(counts).forEach(type => {
-    message += `${type}: `.padEnd(9);
+    message += `${type}: `.padEnd(7);
     let commaNeeded = false;
     Object.keys(counts[type]).forEach(changeType => {
       total += counts[type][changeType];
       const ending = counts[type][changeType] > 1 ? "s" : "";
       message += `${commaNeeded ? ", " : ""}${
         counts[type][changeType]
-      } ${changeType}${ending}\n`;
+      } ${changeType}${ending}`;
       commaNeeded = true;
     });
+    message += "\n";
   });
   message += "\n";
 
@@ -80,7 +81,7 @@ module.exports.createMessage = (conflicts, mismatchRecords) => {
 
   // ************************ Full Raw Dig ************************ \\
   // Show before and after full raw dig output
-  const showFullDig = false; // for testing
+  const showFullDig = true; // for testing
 
   if (showFullDig) {
     message += headingTitle("FULL DIG OUTPUT");
