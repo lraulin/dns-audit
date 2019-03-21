@@ -2,6 +2,14 @@
  * Pure functions for parsing dig output.
  */
 
+// Extract answer section from dig output
+const digAnswerSection = digOutput => {
+  const match = digOutput.match(/(?<=;; ANSWER SECTION:\s+).*?(?=\s+\n)/gs);
+  return match ? match[0] : "";
+};
+
+module.exports.digAnswerSection = digAnswerSection;
+
 // Parse dig output and return object where key is record type
 // and value is sorted list of values.
 module.exports.parseDigForRecordValues = digOutput => {
@@ -21,14 +29,8 @@ module.exports.parseDigForRecordValues = digOutput => {
 // Take dig output, return line containing timestamp.
 module.exports.digWhenLine = digOutput => digOutput.match(/;; WHEN: .*/)[0];
 
-// Extract answer section from dig output
-module.exports.digAnswerSection = digOutput => {
-  const match = digOutput.match(/(?<=;; ANSWER SECTION:\s+).*?(?=\s+\n)/gs);
-  return match ? match[0] : "";
-};
-
 // Given answer section of dig and answer value, return line containing value.
-module.exports.digAnsweLine = ({ answerSection, value }) =>
+module.exports.digAnswerLine = ({ answerSection, value }) =>
   answerSection.split("\n").find(line => line.includes(value));
 
 // Remove lines from answer section concerning irrelevant record types
