@@ -4,7 +4,7 @@
 
 // Parse dig output and return object where key is record type
 // and value is sorted list of values.
-const parseDigForRecordValues = digOutput => {
+module.exports.parseDigForRecordValues = digOutput => {
   const answerSectionLines = digAnswerSection(digOutput).split("\n");
   const answers = {};
   answerRecords = answerSectionLines.forEach(line => {
@@ -19,29 +19,21 @@ const parseDigForRecordValues = digOutput => {
 };
 
 // Take dig output, return line containing timestamp.
-const digWhenLine = digOutput => digOutput.match(/;; WHEN: .*/)[0];
+module.exports.digWhenLine = digOutput => digOutput.match(/;; WHEN: .*/)[0];
 
 // Extract answer section from dig output
-const digAnswerSection = digOutput => {
+module.exports.digAnswerSection = digOutput => {
   const match = digOutput.match(/(?<=;; ANSWER SECTION:\s+).*?(?=\s+\n)/gs);
   return match ? match[0] : "";
 };
 
 // Given answer section of dig and answer value, return line containing value.
-const digAnswerLine = ({ answerSection, value }) =>
+module.exports.digAnsweLine = ({ answerSection, value }) =>
   answerSection.split("\n").find(line => line.includes(value));
 
 // Remove lines from answer section concerning irrelevant record types
-const filterAnswers = ({ answerSection, typesToKeep }) =>
+module.exports.filterAnswers = ({ answerSection, typesToKeep }) =>
   answerSection
     .split("\n")
     .filter(line => typesToKeep.includes(line.split(/\s/)[3]))
     .join("\n");
-
-module.exports = {
-  digWhenLine,
-  digAnswerLine,
-  filterAnswers,
-  parseDigForRecordValues,
-  digAnswerSection,
-};
