@@ -23,46 +23,45 @@ module.exports.createMessage = (conflicts, mismatchRecords) => {
     "Comparing last two batch dig queries initiated at:\n" +
     `  ${runATime}\n  ${runBTime}\n\n`;
 
-  // Get count of additions, deletions, and changes per record type
+  // Get count of additions, deletions, and changes per domain
   const counts = {};
   conflicts.forEach(conflict => {
-    if (!counts[conflict.type]) counts[conflict.type] = {};
-    if (!counts[conflict.type][conflict.changeType]) {
-      counts[conflict.type][conflict.changeType] = 1;
+    if (!counts[conflict.domain]) counts[conflict.domain] = {};
+    if (!counts[conflict.domain][conflict.type])
+      counts[conflict.domain][conflict.type] = {};
+    if (!counts[conflict.domain][conflict.type][conflict.changeType]) {
+      counts[conflict.domain][conflict.type][conflict.changeType] = 1;
     } else {
-      counts[conflict.type][conflict.changeType]++;
+      counts[conflict.domain][conflict.type][conflict.changeType]++;
     }
   });
+  console.log(counts);
 
   // ************************ Summary ************************ \\
   message += headingTitle("SUMMARY");
 
-  let total = 0;
+  const numberOfDomains = Object.keys(counts).length;
 
-  // Display count of type of changes per record type
-  Object.keys(counts).forEach(type => {
-    message += `${type}: `.padEnd(7);
-    let commaNeeded = false;
-    Object.keys(counts[type]).forEach(changeType => {
-      total += counts[type][changeType];
-      const ending = counts[type][changeType] > 1 ? "s" : "";
-      message += `${commaNeeded ? ", " : ""}${
-        counts[type][changeType]
-      } ${changeType}${ending}`;
-      commaNeeded = true;
+  // List affected domains and summary of changes
+  // Ex. 4 total changes in 3 domains:
+  message += `${
+    mismatchRecords.length
+  } total changes in ${numberOfDomains} domain${
+    numberOfDomains > 1 ? "s" : ""
+  }:\n`;
+  Object.keys(counts).forEach(domain => {
+    message += `  ${domain}    `;
+    Object.keys(counts[domain]).forEach(type => {
+      let sep = false;
+      Object.keys(counts[domain][type]).forEach(changeType => {
+        const num = counts[domain][type][changeType];
+        if (sep) message += ", ";
+        message += `${num} ${type} ${changeType}${num > 1 ? "s" : ""}`;
+        sep = true;
+      });
     });
     message += "\n";
   });
-  message += "\n";
-
-  // List affected domains
-  const affectedDomains = mismatchRecords.length;
-  message += `${total} total changes in ${affectedDomains} domain${
-    affectedDomains > 1 ? "s" : ""
-  }:\n`;
-  mismatchRecords
-    .map(row => domainIdLookup[row.domain_id])
-    .forEach(domain => (message += `  ${domain}\n`));
   message += "\n";
 
   const noRecordMsg = ">> NO RECORD <<";
@@ -70,18 +69,24 @@ module.exports.createMessage = (conflicts, mismatchRecords) => {
   // ************************ Diffs ************************ \\
   message += headingTitle("DIFFS");
   // Show diff lines
+  let currentDomain = "";
+  let sepNeeded = false;
   conflicts.forEach(conflict => {
+    if (currentDomain !== conflict.domain && sepNeeded)
+      message += "-".repeat(80) + "\n";
+    currentDomain = conflict.domain;
     message +=
       `${conflict.domain}: ${conflict.changeType.toUpperCase()}\n` +
       `  ${conflict.whenLineA}\n` +
       `  ${conflict.digLineA || noRecordMsg} \n` +
       `  ${conflict.whenLineB}\n` +
       `  ${conflict.digLineB || noRecordMsg}\n\n`;
+    sepNeeded = true;
   });
 
   // ************************ Full Raw Dig ************************ \\
   // Show before and after full raw dig output
-  const showFullDig = true; // for testing
+  const showFullDig = false; // for testing
 
   if (showFullDig) {
     message += headingTitle("FULL DIG OUTPUT");

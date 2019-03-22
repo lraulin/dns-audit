@@ -10,11 +10,12 @@ const { sendEmail } = require("./email");
 const server = "152.120.225.240";
 
 const main = async () => {
-  await digAllDomains(server);
+  //await digAllDomains(server);
   const recordRows = getMismatches();
   const conflicts = analyzeMismatches(recordRows);
   const message = createMessage(conflicts, recordRows);
-  sendEmail(message);
+  console.log(message);
+  //sendEmail(message);
   //cleanUp();
 };
 

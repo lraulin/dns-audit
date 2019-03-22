@@ -12,22 +12,26 @@ module.exports.digAnswerSection = digAnswerSection;
 
 // Parse dig output and return object where key is record type
 // and value is sorted list of values.
-module.exports.parseDigForRecordValues = digOutput => {
+module.exports.parseDigForRecordValues = ({ digOutput = "", types = [] }) => {
   const answerSectionLines = digAnswerSection(digOutput).split("\n");
   const answers = {};
   answerRecords = answerSectionLines.forEach(line => {
     const parts = line.split(/\s+/);
     const type = parts[3];
-    const value = parts.slice(4).join(" ");
-    if (!answers[type]) answers[type] = [];
-    answers[type].push(value);
+    if (types.includes(type)) {
+      if (!answers[type]) answers[type] = [];
+      answers[type].push(parts.slice(4).join(" "));
+    }
   });
   Object.values(answers).forEach(arr => arr.sort());
   return answers;
 };
 
 // Take dig output, return line containing timestamp.
-module.exports.digWhenLine = digOutput => digOutput.match(/;; WHEN: .*/)[0];
+module.exports.digWhenLine = digOutput => {
+  const match = digOutput.match(/;; WHEN: .*/);
+  return match && match[0];
+};
 
 // Given answer section of dig and answer value, return line containing value.
 module.exports.digAnswerLine = ({ answerSection, value }) =>

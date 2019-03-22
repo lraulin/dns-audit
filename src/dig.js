@@ -5,10 +5,10 @@
 const dig = require("node-dig-dns");
 const stringify = require("json-stable-stringify");
 const { insertIntoTblRecord, insertIntoTblRunDatetime } = require("./sqlite");
-const { domains, domainIdLookup } = require("./dbCollections");
+const { domains, domainIdLookup, types } = require("./dbCollections");
 const { parseDigForRecordValues } = require("./digParse");
 
-const digDomain = async ({ runId, domain, server }) => {
+const digDomain = async ({ runId, domain, server, types }) => {
   try {
     // Raw output of dig command.
     const raw = await dig([server, domain, "ANY"], { raw: true });
@@ -16,7 +16,7 @@ const digDomain = async ({ runId, domain, server }) => {
     insertIntoTblRecord({
       runId: runId,
       domainId: domainIdLookup[domain],
-      records: stringify(parseDigForRecordValues(raw)),
+      records: stringify(parseDigForRecordValues({ digOutput: raw, types })),
       raw,
     });
   } catch (e) {
@@ -30,7 +30,7 @@ module.exports.digAllDomains = async server => {
     const runId = insertIntoTblRunDatetime(runEpoch);
     for (let domain of domains) {
       console.log(`Running dig for ${domain}...`);
-      await digDomain({ runId, domain, server });
+      await digDomain({ runId, domain, server, types });
     }
   } catch (e) {
     console.log(e);
