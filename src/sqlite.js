@@ -87,3 +87,27 @@ module.exports.cleanUp = (hours = 24) => {
     console.log(e);
   }
 };
+
+module.exports.insertIntoTblReport = ({ body, json }) =>
+  db
+    .prepare(
+      `INSERT INTO tbl_report (created_at, body, json) VALUES (?, ?, ?);`,
+    )
+    .run(new Date().getTime(), body, json).lastInsertRowid;
+
+module.exports.insertIntoTblEmail = () =>
+  db
+    .prepare(`INSERT INTO tbl_email (sent_at) VALUES (?);`)
+    .run(new Date().getTime()).lastInsertRowid;
+
+module.exports.lastEmailTimestamp = () => {
+  const row = db
+    .prepare(
+      "SELECT sent_at FROM tbl_email WHERE email_id = (SELECT MAX(email_id) FROM tbl_email)",
+    )
+    .get();
+  return row && row.sent_at;
+};
+
+module.exports.selectFromTblReport = time =>
+  db.prepare("SELECT body FROM tbl_report WHERE created_at > ?").all(time);

@@ -66,6 +66,5 @@ module.exports.analyzeMismatches = rows => {
       }
     });
   });
-  console.log(changes);
   return changes;
 };

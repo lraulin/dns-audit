@@ -1,5 +1,13 @@
 const { exec } = require("child_process");
 const { readFileSync } = require("fs");
+const { combinedReport } = require("./report");
+const {
+  insertIntoTblEmail,
+  lastEmailTimestamp,
+  selectFromTblReport,
+} = require("./sqlite");
+
+const MS_PER_DAY = 86400000;
 
 // Read email list from config file
 const getEmails = () =>
@@ -22,9 +30,23 @@ const email = ({
   );
 };
 
-module.exports.sendEmail = body =>
+const emailReport = body => {
+  insertIntoTblEmail();
   email({
     subject: "DNS Log Discrepancy Report",
     body,
     to: getEmails(),
   });
+};
+
+module.exports.sendEmailIfTime = () => {
+  const lastEmailTime = lastEmailTimestamp();
+  const daysSinceLastEmail =
+    (new Date().getTime() - lastEmailTime) / MS_PER_DAY;
+  const message = selectFromTblReport(lastEmailTime)
+    .map(row => row.body)
+    .join("\n");
+  if (daysSinceLastEmail > 1) {
+    emailReport(message);
+  }
+};

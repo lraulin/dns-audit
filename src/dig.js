@@ -8,10 +8,10 @@ const { insertIntoTblRecord, insertIntoTblRunDatetime } = require("./sqlite");
 const { domains, domainIdLookup, types } = require("./dbCollections");
 const { parseDigForRecordValues } = require("./digParse");
 
-const digDomain = async ({ runId, domain, server, types }) => {
+const digDomain = async ({ runId, domain, types }) => {
   try {
     // Raw output of dig command.
-    const raw = await dig([server, domain, "ANY"], { raw: true });
+    const raw = await dig([domain, "ANY"], { raw: true });
 
     insertIntoTblRecord({
       runId: runId,

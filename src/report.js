@@ -35,7 +35,6 @@ module.exports.createMessage = (conflicts, mismatchRecords) => {
       counts[conflict.domain][conflict.type][conflict.changeType]++;
     }
   });
-  console.log(counts);
 
   // ************************ Summary ************************ \\
   message += headingTitle("SUMMARY");
@@ -70,10 +69,10 @@ module.exports.createMessage = (conflicts, mismatchRecords) => {
   message += headingTitle("DIFFS");
   // Show diff lines
   let currentDomain = "";
-  let sepNeeded = false;
   conflicts.forEach(conflict => {
-    if (currentDomain !== conflict.domain && sepNeeded)
-      message += "-".repeat(80) + "\n";
+    if (currentDomain !== conflict.domain) {
+      message += centerText(conflict.domain);
+    }
     currentDomain = conflict.domain;
     message +=
       `${conflict.domain}: ${conflict.changeType.toUpperCase()}\n` +
@@ -81,7 +80,6 @@ module.exports.createMessage = (conflicts, mismatchRecords) => {
       `  ${conflict.digLineA || noRecordMsg} \n` +
       `  ${conflict.whenLineB}\n` +
       `  ${conflict.digLineB || noRecordMsg}\n\n`;
-    sepNeeded = true;
   });
 
   // ************************ Full Raw Dig ************************ \\
@@ -100,3 +98,8 @@ module.exports.createMessage = (conflicts, mismatchRecords) => {
 
   return message;
 };
+
+module.exports.combinedReport = since =>
+  selectFromTblReport(lastEmail)
+    .map(row => row.body)
+    .join("\n");
