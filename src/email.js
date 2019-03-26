@@ -21,4 +21,4 @@ const msg = ({ to = "leeraulin@gmail.com", subject = "test" }) => {
   });
 };
 
-msg();
+msg({});
