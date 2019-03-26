@@ -7,4 +7,4 @@ const write = (obj, file) => {
   stream.end();
 };
 
-module.exports = { write, email };
+module.exports = { write };

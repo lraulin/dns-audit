@@ -8,6 +8,7 @@ const {
   lastEmailTimestamp,
   selectFromTblReport,
 } = require("./sqlite");
+const { write } = require("./utils");
 
 const MS_PER_DAY = 86400000;
 
@@ -20,9 +21,11 @@ const email = ({
   body = "Test message",
   to = ["amanda.evans.ctr@dot.gov"],
 }) => {
+  const fileName = `${__dirname}/email.txt`;
+  write(body, fileName);
   // Send email with Unix mailx. Assumes Sendmail or Postfix is configured.
   exec(
-    `mail -s '${subject}' ${to.join(" ")} <<< '${body}'`,
+    `mail -s '${subject}' ${to.join(" ")} -q ${fileName}'`,
     (err, stdout, stderr) => {
       if (err) {
         console.log(err);
