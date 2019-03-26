@@ -3,7 +3,7 @@ const nodemailer = require("nodemailer");
 
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
-  name: "localhost",
+  name: "dothqnlas035vg",
 });
 
 const msg = ({ to = "leeraulin@gmail.com", subject = "test" }) => {
