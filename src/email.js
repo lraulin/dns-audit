@@ -1,55 +1,24 @@
-const { exec } = require("child_process");
-const { readFileSync } = require("fs");
-const { combinedReport } = require("./report");
-const {
-  insertIntoTblEmail,
-  lastEmailTimestamp,
-  selectFromTblReport,
-} = require("./sqlite");
+"use strict";
+const nodemailer = require("nodemailer");
 
-const MS_PER_DAY = 86400000;
+// create reusable transporter object using the default SMTP transport
+let transporter = nodemailer.createTransport({
+  name: "localhost",
+});
 
-// Read email list from config file
-const getEmails = () =>
-  readFileSync(require.resolve("../config/emails.txt"), "utf8").split("\n");
+const msg = ({ to = "leeraulin@gmail.com", subject = "test" }) => {
+  // setup email data with unicode symbols
+  let mailOptions = {
+    to,
+    subject, // plain text body
+  };
 
-const email = ({
-  subject = "This is a test",
-  body = "Test message",
-  to = ["amanda.evans.ctr@dot.gov"],
-}) => {
-  // Send email with Unix mailx. Assumes Sendmail or Postfix is configured.
-  exec(
-    `mail -s '${subject}' ${to.join(" ")} <<< '${body}'`,
-    (err, stdout, stderr) => {
-      if (err) {
-        console.log(err);
-        return;
-      }
-    },
-  );
-};
-
-const emailReport = body => {
-  insertIntoTblEmail(body);
-  email({
-    subject: "DNS Log Discrepancy Report",
-    body,
-    to: getEmails(),
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return console.log(error);
+    }
+    console.log("Message %s sent: %s", info.messageId, info.response);
   });
 };
 
-module.exports.sendEmailIfTime = () => {
-  const lastEmailTime = lastEmailTimestamp();
-  console.log(
-    `Last Email Sent At: ${new Date(lastEmailTime).toLocaleString()}`,
-  );
-  const daysSinceLastEmail =
-    (new Date().getTime() - lastEmailTime) / MS_PER_DAY;
-  const rows = selectFromTblReport(lastEmailTime);
-  const message = rows.map(row => row.body).join("\n");
-  console.log(`Days Since Last Email: ${daysSinceLastEmail}`);
-  if (daysSinceLastEmail > 1) {
-    emailReport(message);
-  }
-};
+msg();

@@ -2,6 +2,7 @@ dependencies:
   better-sqlite3: 5.4.0
   json-stable-stringify: 1.0.1
   node-dig-dns: 0.2.10
+  nodemailer: 6.0.0
   sqlite3: 4.0.6
 devDependencies:
   eslint: 5.15.3
@@ -897,6 +898,12 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-TwWAOZb0j7e9eGaf9esRx3ZcLaE5tQ2lvYy1pb5IAaG1a2e2Kv5Lms1Y4hpj+ciXJRofIxxlt5haeQ/2ANeE0Q==
+  /nodemailer/6.0.0:
+    dev: false
+    engines:
+      node: '>=6.0.0'
+    resolution:
+      integrity: sha512-PMQJyLhoNAMoBU1hEh5aaUkpa/tcDNwzS7s7zow/myKfoEoZewMxUuWZqQ5yjYsAnvE484KSkYH5s6iPvcjhCg==
   /nopt/4.0.1:
     dependencies:
       abbrev: 1.1.1
@@ -1435,5 +1442,6 @@ specifiers:
   eslint-plugin-prettier: 3.0.1
   json-stable-stringify: 1.0.1
   node-dig-dns: 0.2.10
+  nodemailer: ^6.0.0
   prettier: 1.16.4
   sqlite3: 4.0.6
