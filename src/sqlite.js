@@ -95,10 +95,14 @@ module.exports.insertIntoTblReport = ({ body, json }) =>
     )
     .run(new Date().getTime(), body, json).lastInsertRowid;
 
-module.exports.insertIntoTblEmail = () =>
+module.exports.insertIntoTblEmail = body => {
+  const date = new Date();
   db
-    .prepare(`INSERT INTO tbl_email (sent_at) VALUES (?);`)
-    .run(new Date().getTime()).lastInsertRowid;
+    .prepare(
+      `INSERT INTO tbl_email (sent_at, sent_at_local, email_body) VALUES (?, ?, ?);`,
+    )
+    .run(date.getTime(), date.toLocaleString(), body).lastInsertRowid;
+};
 
 module.exports.lastEmailTimestamp = () => {
   const row = db

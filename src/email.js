@@ -31,7 +31,7 @@ const email = ({
 };
 
 const emailReport = body => {
-  insertIntoTblEmail();
+  insertIntoTblEmail(body);
   email({
     subject: "DNS Log Discrepancy Report",
     body,
@@ -41,11 +41,14 @@ const emailReport = body => {
 
 module.exports.sendEmailIfTime = () => {
   const lastEmailTime = lastEmailTimestamp();
+  console.log(
+    `Last Email Sent At: ${new Date(lastEmailTime).toLocaleString()}`,
+  );
   const daysSinceLastEmail =
     (new Date().getTime() - lastEmailTime) / MS_PER_DAY;
-  const message = selectFromTblReport(lastEmailTime)
-    .map(row => row.body)
-    .join("\n");
+  const rows = selectFromTblReport(lastEmailTime);
+  const message = rows.map(row => row.body).join("\n");
+  console.log(`Days Since Last Email: ${daysSinceLastEmail}`);
   if (daysSinceLastEmail > 1) {
     emailReport(message);
   }
