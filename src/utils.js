@@ -1,4 +1,8 @@
 "use strict";
+/**
+ * Grab-bag of helper functions.
+ */
+
 const fs = require("fs");
 
 const write = (obj, file) => {

@@ -13,8 +13,11 @@ const centerText = (text, fillerChar = " ") => {
   return (filler + text + filler).padEnd(80) + "\n";
 };
 
+// "text" ==> "--------------------------------------text--------------------------------------"
 const headingTitle = text => centerText(text, "-");
 
+// Create a text message summarizing changes in records of interest between two
+// dig runs.
 module.exports.createMessage = (conflicts, mismatchRecords) => {
   const title = "DNS Discrepancy Monitoring";
   const bar = "=".repeat(80) + "\n";
@@ -99,8 +102,3 @@ module.exports.createMessage = (conflicts, mismatchRecords) => {
 
   return message;
 };
-
-module.exports.combinedReport = since =>
-  selectFromTblReport(lastEmail)
-    .map(row => row.body)
-    .join("\n");

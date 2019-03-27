@@ -1,8 +1,12 @@
 "use strict";
+/**
+ * Module for sending email using Unix mail (mailx) command. Assumes an MTA
+ * (mail transfer agent) like Postfix is configured, so running
+ * `mail -s 'test' address@something.com` will successuflly send an email.
+ */
 
 const { exec } = require("child_process");
 const { readFileSync } = require("fs");
-const { combinedReport } = require("./report");
 const {
   insertIntoTblEmail,
   lastEmailTimestamp,
