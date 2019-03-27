@@ -16,7 +16,7 @@ module.exports.digAnswerSection = digAnswerSection;
 module.exports.parseDigForRecordValues = ({ digOutput = "", types = [] }) => {
   const answerSectionLines = digAnswerSection(digOutput).split("\n");
   const answers = {};
-  answerRecords = answerSectionLines.forEach(line => {
+  answerSectionLines.forEach(line => {
     const parts = line.split(/\s+/);
     const type = parts[3];
     if (types.includes(type)) {
