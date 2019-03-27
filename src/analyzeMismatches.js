@@ -1,3 +1,4 @@
+"use strict";
 /**
  * Function that analyzes rows from mismatch query. Returns array of objects
  * with keys: domain, type, whenLineA, whenLineB, changeType, valuesA, valuesB,

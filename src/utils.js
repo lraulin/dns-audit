@@ -1,4 +1,6 @@
+"use strict";
 const fs = require("fs");
+
 const write = (obj, file) => {
   // Save input to file as json if object or text if string.
   const text = typeof obj === "string" ? obj : JSON.stringify(obj, null, 2);

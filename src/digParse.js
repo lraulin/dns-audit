@@ -1,3 +1,4 @@
+"use strict";
 /**
  * Pure functions for parsing dig output.
  */

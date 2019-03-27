@@ -1,3 +1,4 @@
+"use strict";
 /**
  * Module for interacting with sqlite database file.
  */
@@ -88,6 +89,8 @@ module.exports.cleanUp = (hours = 24) => {
   }
 };
 
+// Store result of dig, including DNS record values of interest deterministically
+// serialized (ie if keys and values are the same, the strings should be identical)
 module.exports.insertIntoTblReport = ({ body, json }) =>
   db
     .prepare(
@@ -95,6 +98,7 @@ module.exports.insertIntoTblReport = ({ body, json }) =>
     )
     .run(new Date().getTime(), body, json).lastInsertRowid;
 
+// Store email contents and time sent in tbl_email
 module.exports.insertIntoTblEmail = body => {
   const date = new Date();
   db
@@ -104,6 +108,7 @@ module.exports.insertIntoTblEmail = body => {
     .run(date.getTime(), date.toLocaleString(), body).lastInsertRowid;
 };
 
+// Return the Unix timestamp for the most recent email.
 module.exports.lastEmailTimestamp = () => {
   const row = db
     .prepare(
@@ -113,5 +118,6 @@ module.exports.lastEmailTimestamp = () => {
   return row && row.sent_at;
 };
 
+// Retrieve change summaries created after Unix timestamp.
 module.exports.selectFromTblReport = time =>
   db.prepare("SELECT body FROM tbl_report WHERE created_at > ?").all(time);

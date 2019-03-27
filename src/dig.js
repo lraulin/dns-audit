@@ -1,3 +1,4 @@
+"use strict";
 /**
  * Module for executing dig command and parsing dig output.
  */

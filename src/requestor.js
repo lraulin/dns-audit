@@ -1,3 +1,4 @@
+"use strict";
 // Crockford, Douglas. How JavaScript Works (Kindle Locations 3282-3285). Virgule-Solidus. Kindle Edition.
 //TODO: Probably won't use this. Delete at some point.
 

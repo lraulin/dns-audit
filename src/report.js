@@ -1,3 +1,4 @@
+"use strict";
 /**
  * Module to generate human-readable report on DNS record changes.
  */

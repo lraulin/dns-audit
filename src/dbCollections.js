@@ -1,3 +1,4 @@
+"use strict";
 /**
  * Module for generating unchanging lists and two-way id/name lookup objects
  * from data in the database file.
