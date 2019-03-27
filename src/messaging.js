@@ -44,7 +44,7 @@ const emailReport = body => {
   });
 };
 
-module.exports.sendEmailIfTime = () => {
+const sendEmailIfTime = () => {
   const lastEmailTime = lastEmailTimestamp();
   console.log(
     `Last Email Sent At: ${new Date(lastEmailTime).toLocaleString()}`,
@@ -58,3 +58,9 @@ module.exports.sendEmailIfTime = () => {
     emailReport(message);
   }
 };
+
+module.exports = { sendEmailIfTime };
+
+if (require.main === module) {
+  sendEmailIfTime();
+}

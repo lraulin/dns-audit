@@ -1,7 +1,6 @@
 dependencies:
   better-sqlite3: 5.4.0
   json-stable-stringify: 1.0.1
-  mailx: 0.0.11
   node-dig-dns: 0.2.10
   sqlite3: 4.0.6
 devDependencies:
@@ -44,10 +43,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-jPTiwtOxaHNaAPg/dmrJ/beuzLRnXtB0kQPQ8JpotKJgTB6rX6c8mlf315941pyjBSaPg8NHXS9fhP4u17DpGA==
-  /addressparser/1.0.1:
-    dev: false
-    resolution:
-      integrity: sha1-R6++GiqSYhkdtoOOT9HTm0CCF0Y=
   /ajv/6.10.0:
     dependencies:
       fast-deep-equal: 2.0.1
@@ -126,10 +121,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-x57Zf380y48robyXkLzDZkdLS3k=
-  /asynk/0.0.12:
-    dev: false
-    resolution:
-      integrity: sha1-qLN836VbBKyGVYRa4wri87cN+H8=
   /aws-sign2/0.7.0:
     dev: false
     resolution:
@@ -161,18 +152,6 @@ packages:
       concat-map: 0.0.1
     resolution:
       integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==
-  /buildmail/3.10.0:
-    dependencies:
-      addressparser: 1.0.1
-      libbase64: 0.1.0
-      libmime: 2.1.0
-      libqp: 1.1.0
-      nodemailer-fetch: 1.6.0
-      nodemailer-shared: 1.1.0
-    deprecated: This project is unmaintained
-    dev: false
-    resolution:
-      integrity: sha1-xoJtcW55RbtvaxQ0tTmF4CmgMVk=
   /callsites/3.0.0:
     dev: true
     engines:
@@ -326,13 +305,8 @@ packages:
     dev: true
     resolution:
       integrity: sha512-CwBLREIQ7LvYFB0WyRvwhq5N5qPhc6PMjD6bYggFlI5YyDgl+0vxq5VHbMOFqLg7hfWzmu8T5Z1QofhmTIhItA==
-  /encoding/0.1.12:
-    dependencies:
-      iconv-lite: 0.4.24
-    dev: false
-    resolution:
-      integrity: sha1-U4tm8+5izRq1HsMjgp0flIDHS+s=
   /escape-string-regexp/1.0.5:
+    dev: true
     engines:
       node: '>=0.8.0'
     resolution:
@@ -641,27 +615,6 @@ packages:
       npm: '>=1.3.7'
     resolution:
       integrity: sha1-muzZJRFHcvPZW2WmCruPfBj7rOE=
-  /httpntlm/1.6.1:
-    dependencies:
-      httpreq: 0.4.24
-      underscore: 1.7.0
-    dev: false
-    engines:
-      node: '>=0.8.0'
-    resolution:
-      integrity: sha1-rQFScUOi6Hc8+uapb1hla7UqNLI=
-  /httpreq/0.4.24:
-    dev: false
-    engines:
-      node: '>= 0.8.0'
-    resolution:
-      integrity: sha1-QzX/2CzZaWaKOUZckprGHWOTYn8=
-  /iconv-lite/0.4.13:
-    dev: false
-    engines:
-      node: '>=0.8.0'
-    resolution:
-      integrity: sha1-H4irpKsLFQjoMSrMOTRfNumS4vI=
   /iconv-lite/0.4.24:
     dependencies:
       safer-buffer: 2.1.2
@@ -681,15 +634,6 @@ packages:
       node: '>= 4'
     resolution:
       integrity: sha512-cyFDKrqc/YdcWFniJhzI42+AzS+gNwmUzOSFcRCQYwySuBBBy/KjuxWLZ/FHEH6Moq1NizMOBWyTcv8O4OZIMg==
-  /imap/0.8.19:
-    dependencies:
-      readable-stream: 1.1.14
-      utf7: 1.0.2
-    dev: false
-    engines:
-      node: '>=0.8.0'
-    resolution:
-      integrity: sha1-NniHOTSrCc6mukh0HyhNoq9Z2NU=
   /import-fresh/3.0.0:
     dependencies:
       parent-module: 1.0.0
@@ -743,10 +687,6 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha512-vBtiSgrEiNocWvvZX1RVfeOKa2mCHLZQ2p9nkQkQZ/BvEiY+6CcUz0eyjvIiewjJoeNidzg2I+tpPJvpyspL1w==
-  /ip/1.1.5:
-    dev: false
-    resolution:
-      integrity: sha1-vd7XARQpCCjAoDnnLvJfWq7ENUo=
   /is-fullwidth-code-point/1.0.0:
     dependencies:
       number-is-nan: 1.0.1
@@ -768,10 +708,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-5HnICFjfDBsR3dppQPlgEfzaSpo=
-  /isarray/0.0.1:
-    dev: false
-    resolution:
-      integrity: sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8=
   /isarray/1.0.0:
     dev: false
     resolution:
@@ -845,22 +781,6 @@ packages:
       node: '>= 0.8.0'
     resolution:
       integrity: sha1-OwmSTt+fCDwEkP3UwLxEIeBHZO4=
-  /libbase64/0.1.0:
-    dev: false
-    resolution:
-      integrity: sha1-YjUag5VjrF/1vSbxL2Dpgwu3UeY=
-  /libmime/2.1.0:
-    dependencies:
-      iconv-lite: 0.4.13
-      libbase64: 0.1.0
-      libqp: 1.1.0
-    dev: false
-    resolution:
-      integrity: sha1-Ubx23iKDFh65BRxLyArtcT5P0c0=
-  /libqp/1.1.0:
-    dev: false
-    resolution:
-      integrity: sha1-9ebgatdLeU+1tbZpiL9yjvHe2+g=
   /lodash.compact/3.0.1:
     dev: false
     resolution:
@@ -869,35 +789,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
-  /mailcomposer/3.12.0:
-    dependencies:
-      buildmail: 3.10.0
-      libmime: 2.1.0
-    deprecated: This project is unmaintained
-    dev: false
-    resolution:
-      integrity: sha1-nF4RiKqOHGLsi4a9Q0aBArY56Pk=
-  /mailparser/0.6.2:
-    dependencies:
-      encoding: 0.1.12
-      mime: 1.6.0
-      mimelib: 0.3.1
-      uue: 3.1.2
-    deprecated: Mailparser versions older than v2.3.0 are deprecated
-    dev: false
-    resolution:
-      integrity: sha1-A8SGA5vfTfbNO2rcqqxBB9/bwGg=
-  /mailx/0.0.11:
-    dependencies:
-      asynk: 0.0.12
-      imap: 0.8.19
-      mailparser: 0.6.2
-      nodemailer: 2.6.4
-      optimist: 0.6.1
-      underscore: 1.9.1
-    dev: false
-    resolution:
-      integrity: sha1-z3af+I7WMq81UsJX5kHAXufUHYE=
   /mime-db/1.38.0:
     dev: false
     engines:
@@ -912,21 +803,6 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha512-aGl6TZGnhm/li6F7yx82bJiBZwgiEa4Hf6CNr8YO+r5UHr53tSTYZb102zyU50DOWWKeOv0uQLRL0/9EiKWCog==
-  /mime/1.6.0:
-    dev: false
-    engines:
-      node: '>=4'
-    hasBin: true
-    resolution:
-      integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
-  /mimelib/0.3.1:
-    dependencies:
-      addressparser: 1.0.1
-      encoding: 0.1.12
-    deprecated: This project is unmaintained
-    dev: false
-    resolution:
-      integrity: sha1-eHrdJBXYJ6yzr27EvKHqlZZBiFM=
   /mimic-fn/1.2.0:
     dev: true
     engines:
@@ -938,10 +814,6 @@ packages:
       brace-expansion: 1.1.11
     resolution:
       integrity: sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
-  /minimist/0.0.10:
-    dev: false
-    resolution:
-      integrity: sha1-3j+YVD2/lggr5IrRoMfNqDYwHc8=
   /minimist/0.0.8:
     resolution:
       integrity: sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=
@@ -1025,58 +897,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-TwWAOZb0j7e9eGaf9esRx3ZcLaE5tQ2lvYy1pb5IAaG1a2e2Kv5Lms1Y4hpj+ciXJRofIxxlt5haeQ/2ANeE0Q==
-  /nodemailer-direct-transport/3.3.2:
-    dependencies:
-      nodemailer-shared: 1.1.0
-      smtp-connection: 2.12.0
-    dev: false
-    resolution:
-      integrity: sha1-6W+vuQNYVglH5WkBfZfmBzilCoY=
-  /nodemailer-fetch/1.6.0:
-    dev: false
-    resolution:
-      integrity: sha1-ecSQihwPXzdbc/6IjamCj23JY6Q=
-  /nodemailer-shared/1.1.0:
-    dependencies:
-      nodemailer-fetch: 1.6.0
-    dev: false
-    resolution:
-      integrity: sha1-z1mU4v0mjQD1zw+nZ6CBae2wfsA=
-  /nodemailer-smtp-pool/2.8.2:
-    dependencies:
-      nodemailer-shared: 1.1.0
-      nodemailer-wellknown: 0.1.10
-      smtp-connection: 2.12.0
-    dev: false
-    resolution:
-      integrity: sha1-LrlNbPhXgLG0clzoU7nL1ejajHI=
-  /nodemailer-smtp-transport/2.7.2:
-    dependencies:
-      nodemailer-shared: 1.1.0
-      nodemailer-wellknown: 0.1.10
-      smtp-connection: 2.12.0
-    dev: false
-    resolution:
-      integrity: sha1-A9ccdjFPFKx9vHvwM6am0W1n+3c=
-  /nodemailer-wellknown/0.1.10:
-    dev: false
-    resolution:
-      integrity: sha1-WG24EB2zDLRDjrVGc3pBqtDPE9U=
-  /nodemailer/2.6.4:
-    dependencies:
-      libmime: 2.1.0
-      mailcomposer: 3.12.0
-      nodemailer-direct-transport: 3.3.2
-      nodemailer-shared: 1.1.0
-      nodemailer-smtp-pool: 2.8.2
-      nodemailer-smtp-transport: 2.7.2
-      socks: 1.1.9
-    deprecated: 'All versions below 4.0.1 of Nodemailer are deprecated. See https://nodemailer.com/status/'
-    dev: false
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha1-ViBwfFX6xnS24uXkJXCLmtXGttY=
   /nopt/4.0.1:
     dependencies:
       abbrev: 1.1.1
@@ -1134,13 +954,6 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-BnQoIw/WdEOyeUsiu6UotoZ5YtQ=
-  /optimist/0.6.1:
-    dependencies:
-      minimist: 0.0.10
-      wordwrap: 0.0.3
-    dev: false
-    resolution:
-      integrity: sha1-2j6nRob6IaGaERwybpDrFaAZZoY=
   /optionator/0.8.2:
     dependencies:
       deep-is: 0.1.3
@@ -1259,15 +1072,6 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==
-  /readable-stream/1.1.14:
-    dependencies:
-      core-util-is: 1.0.2
-      inherits: 2.0.3
-      isarray: 0.0.1
-      string_decoder: 0.10.31
-    dev: false
-    resolution:
-      integrity: sha1-fPTFTvZI44EwhMY23SB54WbAgdk=
   /readable-stream/2.3.6:
     dependencies:
       core-util-is: 1.0.2
@@ -1361,11 +1165,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
-  /semver/5.3.0:
-    dev: false
-    hasBin: true
-    resolution:
-      integrity: sha1-myzl094C0XxgEq0yaqa00M9U+U8=
   /semver/5.6.0:
     hasBin: true
     resolution:
@@ -1401,31 +1200,6 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-Qu+VC3EwYLldKa1fCxuuvULvSJOKEgk9pi8dZeCVK7TqBfUNTH4sFkk4joj8afVSfAYgJoSOetjx9QWOJ5mYoQ==
-  /smart-buffer/1.1.15:
-    dev: false
-    engines:
-      node: '>= 0.10.15'
-      npm: '>= 1.3.5'
-    resolution:
-      integrity: sha1-fxFLW2X6s+KjWqd1uxLw0cZJvxY=
-  /smtp-connection/2.12.0:
-    dependencies:
-      httpntlm: 1.6.1
-      nodemailer-shared: 1.1.0
-    dev: false
-    resolution:
-      integrity: sha1-1275EnyyPCJZ7bHoNJwujV4tdME=
-  /socks/1.1.9:
-    dependencies:
-      ip: 1.1.5
-      smart-buffer: 1.1.15
-    deprecated: 'If using 2.x branch, please upgrade to at least 2.1.6 to avoid a serious bug with socket data flow and an import issue introduced in 2.1.0'
-    dev: false
-    engines:
-      node: '>= 0.10.0'
-      npm: '>= 1.3.5'
-    resolution:
-      integrity: sha1-Yo1+TQSRJDVEWsC25Fk3bLPm1pE=
   /sprintf-js/1.0.3:
     dev: true
     resolution:
@@ -1484,10 +1258,6 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-vafcv6KjVZKSgz06oM/H6GDBrAtz8vdhQakGjFIvNrHA6y3HCF1CInLy+QLq8dTJPQ1b+KDUqDFctkdRW44e1w==
-  /string_decoder/0.10.31:
-    dev: false
-    resolution:
-      integrity: sha1-YuIDvEF2bGwoyfyEMB2rHFMQ+pQ=
   /string_decoder/1.1.1:
     dependencies:
       safe-buffer: 5.1.2
@@ -1602,36 +1372,15 @@ packages:
       node: '>= 0.8.0'
     resolution:
       integrity: sha1-WITKtRLPHTVeP7eE8wgEsrUg23I=
-  /underscore/1.7.0:
-    dev: false
-    resolution:
-      integrity: sha1-a7rwh3UA02vjTsqlhODbn+8DUgk=
-  /underscore/1.9.1:
-    dev: false
-    resolution:
-      integrity: sha512-5/4etnCkd9c8gwgowi5/om/mYO5ajCaOgdzj/oW+0eQV9WxKBDZw5+ycmKmeaTXjInS/W0BzpGLo2xR2aBwZdg==
   /uri-js/4.2.2:
     dependencies:
       punycode: 2.1.1
     resolution:
       integrity: sha512-KY9Frmirql91X2Qgjry0Wd4Y+YTdrdZheS8TFwvkbLWf/G5KNJDCh6pKL5OZctEW4+0Baa5idK2ZQuELRwPznQ==
-  /utf7/1.0.2:
-    dependencies:
-      semver: 5.3.0
-    dev: false
-    resolution:
-      integrity: sha1-lV9JCq5lO6IguUVqCod2wZk2CZE=
   /util-deprecate/1.0.2:
     dev: false
     resolution:
       integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
-  /uue/3.1.2:
-    dependencies:
-      escape-string-regexp: 1.0.5
-      extend: 3.0.2
-    dev: false
-    resolution:
-      integrity: sha512-axKLXVqwtdI/czrjG0X8hyV1KLgeWx8F4KvSbvVCnS+RUvsQMGRjx0kfuZDXXqj0LYvVJmx3B9kWlKtEdRrJLg==
   /uuid/3.3.2:
     dev: false
     hasBin: true
@@ -1660,12 +1409,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-QGkOQc8XL6Bt5PwnsExKBPuMKBxnGxWWW3fU55Xt4feHozMUhdUMaBCk290qpm/wG5u/RSKzwdAC4i51YigihA==
-  /wordwrap/0.0.3:
-    dev: false
-    engines:
-      node: '>=0.4.0'
-    resolution:
-      integrity: sha1-o9XabNXAvAAI03I0u68b7WMFkQc=
   /wordwrap/1.0.0:
     dev: true
     resolution:
@@ -1691,7 +1434,6 @@ specifiers:
   eslint-config-prettier: 4.1.0
   eslint-plugin-prettier: 3.0.1
   json-stable-stringify: 1.0.1
-  mailx: ^0.0.11
   node-dig-dns: 0.2.10
   prettier: 1.16.4
   sqlite3: 4.0.6
