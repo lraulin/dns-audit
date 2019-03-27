@@ -29,12 +29,18 @@ const email = ({
   write(body, fileName);
   // Send email with Unix mailx. Assumes Sendmail or Postfix is configured.
   exec(
-    `mail -v -s '${subject}' ${to.join(
-      ",",
-    )} < ${fileName} 2>${__dirname}/msg_err_log.txt`,
+    `mail -v -s '${subject}' ${to.join(",")} < ${fileName}`,
     (err, stdout, stderr) => {
       if (err) {
         console.log(err);
+        return;
+      }
+      if (stdout) {
+        console.log(stdout);
+        return;
+      }
+      if (stderr) {
+        console.log(stderr);
         return;
       }
     },
