@@ -1,1 +1,0 @@
-- Using `module.exports.name =` instead of exporting them all at the end helps me keep track of which functions are "public" and which are "internal/private".
