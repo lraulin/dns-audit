@@ -13,12 +13,9 @@ const {
   selectFromTblReport,
 } = require("./sqlite");
 const { write } = require("./utils");
+const emails = require("./config").emails;
 
 const MS_PER_DAY = 86400000;
-
-// Read email list from config file
-const getEmails = () =>
-  readFileSync(require.resolve("../config/emails.txt"), "utf8").split("\n");
 
 const email = ({
   subject = "This is a test",
@@ -52,7 +49,7 @@ const emailReport = body => {
   email({
     subject: "DNS Log Discrepancy Report",
     body,
-    to: getEmails(),
+    to: emails,
   });
 };
 
