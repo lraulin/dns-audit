@@ -10,6 +10,8 @@
     "start": "node src/index.js"
   },
   "dependencies": {
+    "@types/better-sqlite3": "^5.2.3",
+    "@types/node": "^11.12.0",
     "better-sqlite3": "5.4.0",
     "json-stable-stringify": "1.0.1",
     "node-dig-dns": "0.2.10",
@@ -19,6 +21,7 @@
     "eslint": "5.15.3",
     "eslint-config-prettier": "4.1.0",
     "eslint-plugin-prettier": "3.0.1",
-    "prettier": "1.16.4"
+    "prettier": "1.16.4",
+    "tslint": "^5.14.0"
   }
 }
