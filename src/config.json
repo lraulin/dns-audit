@@ -1,4 +1,5 @@
 {
   "emails": ["LIST-OST-ED-DNSReports@dot.gov"],
-  "types": ["A", "AAAA", "CNAME", "MX", "NS", "SOA"]
+  "types": ["A", "AAAA", "CNAME", "MX", "NS", "SOA"],
+  "data_path": "/usr/local/share/dns-audit/"
 }

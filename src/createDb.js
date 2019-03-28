@@ -442,16 +442,28 @@ const insertDomainData = db => {
 };
 
 const insertTypeData = db => {
-  db.prepare(`
+  db.prepare(
+    `
 INSERT INTO "tbl_type" ("type_id","type_name") VALUES (1,'A'),
   (2,'AAAA'),
   (3,'CNAME'),
   (4,'MX'),
   (5,'NS'),
-  (6,'SOA')`);
+  (6,'SOA')`,
+  ).run();
+};
+
+const firstEmail = db => {
+  const time = new Date();
+  db.prepare(
+    `
+INSERT INTO "tbl_email" ("sent_at","sent_at_local","email_body")
+VALUES (?, ?, "No email - Database initialized")
+  `,
+  ).run(time.getTime(), time.toLocaleString());
 };
 
 const createDatabase = db =>
-  callEach(db, createSchema, insertDomainData, insertTypeData);
+  callEach(db, createSchema, insertDomainData, insertTypeData, firstEmail);
 
 module.exports = createDatabase;

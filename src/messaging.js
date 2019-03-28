@@ -6,7 +6,6 @@
  */
 
 const { exec } = require("child_process");
-const { readFileSync } = require("fs");
 const {
   insertIntoTblEmail,
   lastEmailTimestamp,
@@ -14,6 +13,7 @@ const {
 } = require("./sqlite");
 const { write } = require("./utils");
 const emails = require("./config").emails;
+const dir = require("./config").data_path;
 
 const MS_PER_DAY = 86400000;
 
@@ -22,11 +22,11 @@ const email = ({
   body = "Test message",
   to = ["amanda.evans.ctr@dot.gov"],
 }) => {
-  const fileName = `${__dirname}/email.txt`;
+  const fileName = `${dir}/email.txt`;
   write(body, fileName);
   // Send email with Unix mailx. Assumes Sendmail or Postfix is configured.
   exec(
-    `mail -v -s '${subject}' ${to.join(",")} < ${fileName}`,
+    `mail -v -s '${subject}' ${to.join(",")} < ${dir}`,
     (err, stdout, stderr) => {
       if (err) {
         console.log(err);
@@ -55,15 +55,21 @@ const emailReport = body => {
 
 const sendEmailIfTime = () => {
   const lastEmailTime = lastEmailTimestamp();
+  if (!lastEmailTime) {
+    console.log("No previous emails...saving timestamp.");
+    insertIntoTblEmail("N/A - First Run");
+    return;
+  }
+
   console.log(
     `Last Email Sent At: ${new Date(lastEmailTime).toLocaleString()}`,
   );
   const daysSinceLastEmail =
     (new Date().getTime() - lastEmailTime) / MS_PER_DAY;
-  const rows = selectFromTblReport(lastEmailTime);
-  const message = rows.map(row => row.body).join("\n");
   console.log(`Days Since Last Email: ${daysSinceLastEmail}`);
   if (daysSinceLastEmail > 1) {
+    const message = rows.map(row => row.body).join("\n");
+    const rows = selectFromTblReport(lastEmailTime);
     emailReport(message);
   }
 };

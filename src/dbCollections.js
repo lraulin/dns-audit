@@ -42,7 +42,14 @@ const [domains, domainIdLookup] = (() => {
 
 const [runATime, runBTime] = (() => {
   const rows = selectLastTwoFromTblRunDatetime();
-  return [new Date(rows[1].run_datetime), new Date(rows[0].run_datetime)];
+  if (rows.length) {
+    return [
+      new Date(rows[1] && rows[1].run_datetime),
+      new Date(rows[0] && rows[0].run_datetime),
+    ];
+  } else {
+    return [undefined, undefined];
+  }
 })();
 
 module.exports = {

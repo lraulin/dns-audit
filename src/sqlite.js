@@ -3,10 +3,28 @@
  * Module for interacting with sqlite database file.
  */
 
+const fs = require("fs");
 const Database = require("better-sqlite3");
+const dir = require("./config").data_path;
+const fullpath = dir + "data.db";
+const initializeDatabase = require("./createDb");
 
-// Initialize sqlite3 database connection
-const db = new Database(`${__dirname}/data.db`);
+const db = (() => {
+  try {
+    if (fs.existsSync(fullpath)) {
+      return new Database(fullpath);
+    } else {
+      fs.mkdirSync(dir, { recursive: true });
+      const db = new Database(fullpath);
+      initializeDatabase(db);
+      return db;
+    }
+  } catch (err) {
+    console.error(err);
+    console.log("Could not connect to database");
+    process.exit();
+  }
+})();
 
 // Make sure connection will be closed regardless of how script terminates.
 process.on("exit", () => db.close());
