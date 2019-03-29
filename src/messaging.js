@@ -23,7 +23,7 @@ const email = async ({
   body = "Test message",
   to = ["amanda.evans.ctr@dot.gov"],
 }) => {
-  const fileName = `${dir}/email.txt`;
+  const fileName = `${dir}email.txt`;
   await writeFile(fileName, body);
   // Send email with Unix mailx. Assumes Sendmail or Postfix is configured.
   const command = `mail -v -s '${subject}' ${to.join(",")} < ${fileName}`;
