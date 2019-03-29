@@ -11,7 +11,7 @@ const {
   lastEmailTimestamp,
   selectFromTblReport,
 } = require("./sqlite");
-const { write } = require("./utils");
+const { writeFile } = require("./utils");
 const emails = require("./config").emails;
 const dir = require("./config").data_path;
 const logger = require("./logger");
@@ -24,7 +24,7 @@ const email = async ({
   to = ["amanda.evans.ctr@dot.gov"],
 }) => {
   const fileName = `${dir}/email.txt`;
-  await write(body, fileName);
+  await writeFile(fileName, body);
   // Send email with Unix mailx. Assumes Sendmail or Postfix is configured.
   const command = `mail -v -s '${subject}' ${to.join(",")} < ${fileName}`;
   logger.info(`Executing command: ${command}`);

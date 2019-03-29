@@ -13,4 +13,20 @@ const write = (obj, file) => {
   stream.end();
 };
 
-module.exports = { write };
+const readFile = (path, opts = "utf8") =>
+  new Promise((resolve, reject) => {
+    fs.readFile(path, opts, (err, data) => {
+      if (err) reject(err);
+      else resolve(data);
+    });
+  });
+
+const writeFile = (path, data, opts = "utf8") =>
+  new Promise((resolve, reject) => {
+    fs.writeFile(path, data, opts, err => {
+      if (err) reject(err);
+      else resolve();
+    });
+  });
+
+module.exports = { write, writeFile };
