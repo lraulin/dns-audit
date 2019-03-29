@@ -12,7 +12,7 @@ const {
   selectFromTblReport,
 } = require("./sqlite");
 const { writeFile } = require("./utils");
-const emails = require("./config").emails;
+const { emails, dev_emails } = require("./config");
 const dir = require("./config").data_path;
 const logger = require("./logger");
 
@@ -44,15 +44,6 @@ const email = async ({
   });
 };
 
-const emailReport = body => {
-  insertIntoTblEmail(body);
-  email({
-    subject: "DNS Log Discrepancy Report",
-    body,
-    to: emails,
-  });
-};
-
 const sendEmailIfTime = arg => {
   const lastEmailTime = lastEmailTimestamp();
   if (!lastEmailTime) {
@@ -67,11 +58,15 @@ const sendEmailIfTime = arg => {
   const daysSinceLastEmail =
     (new Date().getTime() - lastEmailTime) / MS_PER_DAY;
   logger.info(`Days Since Last Email: ${daysSinceLastEmail}`);
-  if (daysSinceLastEmail > 1) {
-    const rows = selectFromTblReport(lastEmailTime);
-    const message = rows.map(row => row.body).join("\n");
-    logger.info(message);
-    emailReport(message);
+  const rows = selectFromTblReport(lastEmailTime);
+  const message = rows.map(row => row.body).join("\n");
+  logger.info(message);
+
+  if (arg === "test") {
+    email({ subject: "Test Message", body: message, to: dev_emails });
+  } else {
+    insertIntoTblEmail();
+    email({ subject: "DNS Discrepancy Report", body: message, to: emails });
   }
 };
 
