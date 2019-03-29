@@ -8,6 +8,7 @@ const stringify = require("json-stable-stringify");
 const { insertIntoTblRecord, insertIntoTblRunDatetime } = require("./sqlite");
 const { domains, domainIdLookup, types } = require("./dbCollections");
 const { parseDigForRecordValues } = require("./digParse");
+const logger = require("./logger");
 
 const digDomain = async ({ runId, domain, types }) => {
   try {
@@ -21,7 +22,7 @@ const digDomain = async ({ runId, domain, types }) => {
       raw,
     });
   } catch (e) {
-    console.log(e);
+    logger.info(e);
   }
 };
 
@@ -30,10 +31,10 @@ module.exports.digAllDomains = async server => {
     const runEpoch = new Date().getTime();
     const runId = insertIntoTblRunDatetime(runEpoch);
     for (let domain of domains) {
-      console.log(`Running dig for ${domain}...`);
+      logger.info(`Running dig for ${domain}...`);
       await digDomain({ runId, domain, server, types });
     }
   } catch (e) {
-    console.log(e);
+    logger.info(e);
   }
 };

@@ -8,6 +8,7 @@ const Database = require("better-sqlite3");
 const dir = require("./config").data_path;
 const fullpath = dir + "data.db";
 const initializeDatabase = require("./createDb");
+const logger = require("./logger");
 
 const db = (() => {
   try {
@@ -21,7 +22,7 @@ const db = (() => {
     }
   } catch (err) {
     console.error(err);
-    console.log("Could not connect to database");
+    logger.info("Could not connect to database");
     process.exit();
   }
 })();
@@ -103,7 +104,7 @@ module.exports.cleanUp = (hours = 24) => {
       "DELETE FROM tbl_record WHERE run_id <( SELECT run_id FROM tbl_run_datetime WHERE run_datetime = ( SELECT MAX(run_datetime) FROM tbl_run_datetime WHERE run_datetime < ?) );",
     ).run(cutoffEpochMs);
   } catch (e) {
-    console.log(e);
+    logger.info(e);
   }
 };
 

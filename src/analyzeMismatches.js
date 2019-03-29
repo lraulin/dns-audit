@@ -6,6 +6,7 @@
  */
 const { domainIdLookup } = require("./dbCollections");
 const { digAnswerSection, digAnswerLine, digWhenLine } = require("./digParse");
+const logger = require("./logger");
 
 module.exports.analyzeMismatches = rows => {
   const changes = [];

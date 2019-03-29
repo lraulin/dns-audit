@@ -3,6 +3,7 @@
  * Set up database.
  */
 
+const logger = require("./logger");
 const callEach = (arg, ...fns) => fns.forEach(fn => fn(arg));
 
 // Create schema

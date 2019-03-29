@@ -14,34 +14,34 @@ const {
 const { write } = require("./utils");
 const emails = require("./config").emails;
 const dir = require("./config").data_path;
+const logger = require("./logger");
 
 const MS_PER_DAY = 86400000;
 
-const email = ({
+const email = async ({
   subject = "This is a test",
   body = "Test message",
   to = ["amanda.evans.ctr@dot.gov"],
 }) => {
   const fileName = `${dir}/email.txt`;
-  write(body, fileName);
+  await write(body, fileName);
   // Send email with Unix mailx. Assumes Sendmail or Postfix is configured.
-  exec(
-    `mail -v -s '${subject}' ${to.join(",")} < ${dir}`,
-    (err, stdout, stderr) => {
-      if (err) {
-        console.log(err);
-        return;
-      }
-      if (stdout) {
-        console.log(stdout);
-        return;
-      }
-      if (stderr) {
-        console.log(stderr);
-        return;
-      }
-    },
-  );
+  const command = `mail -v -s '${subject}' ${to.join(",")} < ${fileName}`;
+  logger.info(`Executing command: ${command}`);
+  exec(command, (err, stdout, stderr) => {
+    if (err) {
+      logger.error(err);
+      return;
+    }
+    if (stdout) {
+      logger.info(stdout);
+      return;
+    }
+    if (stderr) {
+      logger.error(stderr);
+      return;
+    }
+  });
 };
 
 const emailReport = body => {
@@ -53,23 +53,24 @@ const emailReport = body => {
   });
 };
 
-const sendEmailIfTime = () => {
+const sendEmailIfTime = arg => {
   const lastEmailTime = lastEmailTimestamp();
   if (!lastEmailTime) {
-    console.log("No previous emails...saving timestamp.");
+    logger.info("No previous emails...saving timestamp.");
     insertIntoTblEmail("N/A - First Run");
     return;
   }
 
-  console.log(
+  logger.info(
     `Last Email Sent At: ${new Date(lastEmailTime).toLocaleString()}`,
   );
   const daysSinceLastEmail =
     (new Date().getTime() - lastEmailTime) / MS_PER_DAY;
-  console.log(`Days Since Last Email: ${daysSinceLastEmail}`);
+  logger.info(`Days Since Last Email: ${daysSinceLastEmail}`);
   if (daysSinceLastEmail > 1) {
-    const message = rows.map(row => row.body).join("\n");
     const rows = selectFromTblReport(lastEmailTime);
+    const message = rows.map(row => row.body).join("\n");
+    logger.info(message);
     emailReport(message);
   }
 };

@@ -4,6 +4,7 @@
  */
 
 const { runATime, runBTime, domainIdLookup } = require("./dbCollections");
+const logger = require("./logger");
 
 // Return text as close to centered as possible surrounded by spaces in a string
 // that is exactly 80 chars long followed by a newline.

@@ -2,6 +2,7 @@
 /**
  * Pure functions for parsing dig output.
  */
+const logger = require("./logger");
 
 // Extract answer section from dig output
 const digAnswerSection = digOutput => {

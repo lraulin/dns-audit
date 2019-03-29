@@ -9,6 +9,7 @@ const {
   selectAllFromTblType,
   selectLastTwoFromTblRunDatetime,
 } = require("./sqlite");
+const logger = require("./logger");
 
 // Get DNS record types of interest from database
 const [types, typeIdLookup] = (() => {
