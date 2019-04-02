@@ -61,6 +61,7 @@ if (args.h) {
     sendEmailIfTime(args.t);
   }
   if (args.c) {
-    cleanUp(24);
+    const hours = args.c === true ? 24 : args.c;
+    cleanUp(hours);
   }
 })();
