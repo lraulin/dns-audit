@@ -1,13 +1,16 @@
 "use strict";
 
 const minimist = require("minimist");
+const fs = require("fs");
 const { getMismatches, insertIntoTblReport, cleanUp } = require("./sqlite");
 const { digAllDomains } = require("./dig");
 const { analyzeMismatches } = require("./analyzeMismatches");
 const { createMessage } = require("./report");
 const { sendEmailIfTime } = require("./messaging");
 const logger = require("./logger");
-const version = require("../package").version;
+const { data_path } = require("./config");
+const { version } = require("../package");
+const { createDatabase } = require("./createDatabase");
 
 const help = () => {
   console.log(`DNS Auditing Script v${version}

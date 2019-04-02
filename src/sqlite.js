@@ -7,7 +7,7 @@ const fs = require("fs");
 const Database = require("better-sqlite3");
 const dir = require("./config").data_path;
 const fullpath = dir + "data.db";
-const initializeDatabase = require("./createDb");
+const initializeDatabase = require("./createDatabase");
 const logger = require("./logger");
 
 const db = (() => {
