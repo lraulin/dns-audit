@@ -97,8 +97,14 @@ module.exports.getMismatches = () => {
 };
 
 // Delete all records older than given number of hours.
-module.exports.cleanUp = (hours = 24) => {
+module.exports.cleanUp = hours => {
+  if (hours === true) hours = 24;
   const cutoffEpochMs = new Date().getTime() - hours * 60 * 60 * 1000;
+  logger.info(
+    `Deleting all dig records since ${new Date(
+      cutoffEpochMs,
+    ).toLocaleString()}`,
+  );
   try {
     db.prepare(
       "DELETE FROM tbl_record WHERE run_id <( SELECT run_id FROM tbl_run_datetime WHERE run_datetime = ( SELECT MAX(run_datetime) FROM tbl_run_datetime WHERE run_datetime < ?) );",

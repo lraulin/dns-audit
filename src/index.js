@@ -17,11 +17,20 @@ const help = () => {
                   and send to distribution list.
   -t --test     Combine reports since last email was sent to distrubution list 
                   but send only to devs.
+  -c --clean    Delete data older than given number of hours. Default 24.
 `);
 };
 
 const args = minimist(process.argv.slice(2), {
-  alias: { h: "help", v: "version", d: "dig", m: "message", t: "test" },
+  number: ["clean"],
+  alias: {
+    c: "clean",
+    d: "dig",
+    h: "help",
+    m: "message",
+    t: "test",
+    v: "version",
+  },
   unknown: () => {
     console.log("Unknown argument. Use -h or --help for help.");
     process.exit();
@@ -50,5 +59,8 @@ if (args.h) {
   }
   if (args.m || args.t) {
     sendEmailIfTime(args.t);
+  }
+  if (args.c) {
+    cleanUp(24);
   }
 })();
