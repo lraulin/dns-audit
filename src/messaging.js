@@ -18,6 +18,8 @@ const logger = require("./logger");
 
 const MS_PER_DAY = 86400000;
 
+const plural = num => (num === 1 ? "" : "s");
+
 const email = async ({
   subject = "This is a test",
   body = "Test message",
@@ -44,6 +46,16 @@ const email = async ({
   });
 };
 
+const countChangesPerDomain = tblReportRows =>
+  tblReportRows
+    .map(row => JSON.parse(row.json))
+    .reduce((a, c) => a.concat(c), [])
+    .reduce((a, c) => {
+      if (a[c.domain]) a[c.domain]++;
+      else a[c.domain] = 1;
+      return a;
+    }, {});
+
 const sendEmailIfTime = isTest => {
   const now = new Date();
 
@@ -57,11 +69,39 @@ const sendEmailIfTime = isTest => {
   logger.info(`Days Since Last Email: ${daysSinceLastEmail}`);
 
   const rows = selectFromTblReport(lastEmailTime);
-  const numRuns = rows.length;
-  const summaryHeader = `Combined Report
-  ${numRuns} 
-  `;
-  const message = rows.map(row => row.body).join("\n");
+  const numReports = rows.length;
+  const firstReportTime = new Date(rows[0].created_at).toLocaleString();
+  const lastReportTime = new Date(
+    rows[rows.length - 1].created_at,
+  ).toLocaleString();
+
+  const title = `
+================================================================================
+|                       DNS MONITORING -- COMBINED REPORT                      |
+================================================================================
+`;
+  let summaryHeader = `${title}${numReports} report${plural(
+    numReports,
+  )} from ${firstReportTime} to ${lastReportTime}\n`;
+
+  const changesPerDomain = countChangesPerDomain(rows);
+  const totalDomains = Object.keys(changesPerDomain).length;
+  const totalChanges = Object.values(changesPerDomain).reduce((a, c) => a + c);
+
+  summaryHeader += `${totalChanges} change${plural(
+    totalChanges,
+  )} in ${totalDomains} domain${plural(totalDomains)}\n`;
+
+  Object.keys(changesPerDomain)
+    .sort((a, b) => changesPerDomain[b] - changesPerDomain[a])
+    .forEach(domain => {
+      summaryHeader += `${("" + changesPerDomain[domain]).padStart(
+        4,
+      )}  ${domain}\n`;
+    });
+
+  // Add combined reports to message
+  const message = summaryHeader + rows.map(row => row.body).join("\n");
 
   if (isTest) {
     email({ subject: "Test Message", body: message, to: dev_emails });

@@ -29,4 +29,6 @@ const writeFile = (path, data, opts = "utf8") =>
     });
   });
 
+const plural = num => (num === 1 ? "" : "s");
+
 module.exports = { write, writeFile };

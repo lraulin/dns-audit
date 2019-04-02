@@ -145,4 +145,8 @@ module.exports.lastEmailTimestamp = () => {
 
 // Retrieve change summaries created after Unix timestamp.
 module.exports.selectFromTblReport = time =>
-  db.prepare("SELECT body FROM tbl_report WHERE created_at > ?").all(time);
+  db
+    .prepare(
+      "SELECT report_id, created_at, body, json FROM tbl_report WHERE created_at > ?",
+    )
+    .all(time);
