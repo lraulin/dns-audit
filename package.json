@@ -1,8 +1,9 @@
 {
   "name": "dns-audit",
   "version": "1.0.0",
-  "main": "src/index.js",
   "license": "MIT",
+  "main": "bin/dns-audit.js",
+  "preferGlobal": true,
   "bin": {
     "dns-audit": "bin/dns-audit.js"
   },

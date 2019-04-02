@@ -1,17 +1,44 @@
 "use strict";
 
+const minimist = require("minimist");
 const { getMismatches, insertIntoTblReport, cleanUp } = require("./sqlite");
 const { digAllDomains } = require("./dig");
 const { analyzeMismatches } = require("./analyzeMismatches");
 const { createMessage } = require("./report");
 const { sendEmailIfTime } = require("./messaging");
 const logger = require("./logger");
-const args = require("minimist")(process.argv.slice(2));
+const version = require("../package").version;
 
-// IP for dig command
-//const server = "152.120.225.240";
+const help = () => {
+  console.log(`DNS Auditing Script v${version}
+  options:
+  -d --dig      Run dig for all domains and compare to last run, storing results.
+  -m --message  Combine reports since last email was sent to distribution list
+                  and send to distribution list.
+  -t --test     Combine reports since last email was sent to distrubution list 
+                  but send only to devs.
+`);
+};
 
-const main = async () => {
+const args = minimist(process.argv.slice(2), {
+  alias: { h: "help", v: "version", d: "dig", m: "message", t: "test" },
+  unknown: () => {
+    console.log("Unknown argument. Use -h or --help for help.");
+    process.exit();
+  },
+});
+
+// Show version if called with version flag
+if (args.v) {
+  console.log(version);
+}
+
+// Show usage instructions and quit if called with help flag
+if (args.h) {
+  help();
+}
+
+(async () => {
   if (args.d) {
     logger.log("info", "Starting digs");
     await digAllDomains();
@@ -21,18 +48,7 @@ const main = async () => {
     const body = createMessage(conflicts, recordRows);
     insertIntoTblReport({ body, json: JSON.stringify(conflicts) });
   }
-  if (args.m) {
-    sendEmailIfTime(args.m);
+  if (args.m || args.t) {
+    sendEmailIfTime(args.t);
   }
-  if (args.h || args.help) {
-    // Print help message
-    const helpMessage = `DNS Auditing Tool
-  -d       Run dig against all domains and compare to previous run.  
-  -m       Send an email if more than a day elapsed since previous email.
-  -m test  Send message to devs only and don't mark reports as read.
-    `;
-    logger.info(helpMessage);
-  }
-};
-
-main();
+})();

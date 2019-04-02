@@ -44,29 +44,30 @@ const email = async ({
   });
 };
 
-const sendEmailIfTime = arg => {
+const sendEmailIfTime = isTest => {
+  const now = new Date();
+
+  // Retrieve Unix timestamp when last email was sent.
   const lastEmailTime = lastEmailTimestamp();
-  if (!lastEmailTime) {
-    logger.info("No previous emails...saving timestamp.");
-    insertIntoTblEmail("N/A - First Run");
-    return;
-  }
 
   logger.info(
     `Last Email Sent At: ${new Date(lastEmailTime).toLocaleString()}`,
   );
-  const daysSinceLastEmail =
-    (new Date().getTime() - lastEmailTime) / MS_PER_DAY;
+  const daysSinceLastEmail = (now.getTime() - lastEmailTime) / MS_PER_DAY;
   logger.info(`Days Since Last Email: ${daysSinceLastEmail}`);
-  const rows = selectFromTblReport(lastEmailTime);
-  const message = rows.map(row => row.body).join("\n");
-  logger.info(message);
 
-  if (arg === "test") {
+  const rows = selectFromTblReport(lastEmailTime);
+  const numRuns = rows.length;
+  const summaryHeader = `Combined Report
+  ${numRuns} 
+  `;
+  const message = rows.map(row => row.body).join("\n");
+
+  if (isTest) {
     email({ subject: "Test Message", body: message, to: dev_emails });
   } else {
-    insertIntoTblEmail();
     email({ subject: "DNS Discrepancy Report", body: message, to: emails });
+    insertIntoTblEmail();
   }
 };
 
