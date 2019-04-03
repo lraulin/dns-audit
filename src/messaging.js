@@ -92,16 +92,17 @@ const sendEmailIfTime = isTest => {
   message += `${totalChanges} change${plural(
     totalChanges,
   )} in ${totalDomains} domain${plural(totalDomains)}\n`;
-  message +=
-    "\nDOMAIN                   COUNT    DOMAIN                   COUNT\n";
-  const countTable = columnify(changesPerDomain, {
+
+  const [columnTitles, ...countTable] = columnify(changesPerDomain, {
     columns: ["DOMAIN", "CHANGES"],
-  })
-    .split("\n")
-    .slice(1);
+  }).split("\n");
+
+  const sep = " ";
+  message += columnTitles + sep + columnTitles + "\n";
+
   const breakPoint = Math.ceil(countTable.length / 2);
   for (let i = 0; i < breakPoint; i++) {
-    message += countTable[i] + (countTable[i + breakPoint] || "") + "\n";
+    message += countTable[i] + sep + (countTable[i + breakPoint] || "") + "\n";
   }
 
   // Add combined reports to message
