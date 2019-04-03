@@ -5,6 +5,7 @@
  * `mail -s 'test' address@something.com` will successuflly send an email.
  */
 
+const columnify = require("columnify");
 const { exec } = require("child_process");
 const {
   insertIntoTblEmail,
@@ -80,7 +81,7 @@ const sendEmailIfTime = isTest => {
 |                       DNS MONITORING -- COMBINED REPORT                      |
 ================================================================================
 `;
-  let summaryHeader = `${title}${numReports} report${plural(
+  let message = `${title}${numReports} report${plural(
     numReports,
   )} from ${firstReportTime} to ${lastReportTime}\n`;
 
@@ -88,20 +89,27 @@ const sendEmailIfTime = isTest => {
   const totalDomains = Object.keys(changesPerDomain).length;
   const totalChanges = Object.values(changesPerDomain).reduce((a, c) => a + c);
 
-  summaryHeader += `${totalChanges} change${plural(
+  message += `${totalChanges} change${plural(
     totalChanges,
   )} in ${totalDomains} domain${plural(totalDomains)}\n`;
-
-  Object.keys(changesPerDomain)
-    .sort((a, b) => changesPerDomain[b] - changesPerDomain[a])
-    .forEach(domain => {
-      summaryHeader += `${("" + changesPerDomain[domain]).padStart(
-        4,
-      )}  ${domain}\n`;
-    });
+  message +=
+    "\nDOMAIN                   COUNT    DOMAIN                   COUNT\n";
+  const countTable = columnify(changesPerDomain, {
+    columns: ["DOMAIN", "CHANGES"],
+  })
+    .split("\n")
+    .slice(1);
+  const breakPoint = Math.ceil(countTable.length / 2);
+  for (let i = 0; i < breakPoint; i++) {
+    message += countTable[i] + (countTable[i + breakPoint] || "") + "\n";
+  }
 
   // Add combined reports to message
-  const message = summaryHeader + rows.map(row => row.body).join("\n");
+  message += "\n";
+  rows.forEach((row, i) => {
+    message += `Report ${i + 1} of ${rows.length}\n`;
+    message += row.body + "\n";
+  });
 
   if (isTest) {
     email({ subject: "Test Message", body: message, to: dev_emails });

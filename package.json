@@ -1,6 +1,6 @@
 {
   "name": "dns-audit",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "license": "MIT",
   "main": "bin/dns-audit.js",
   "preferGlobal": true,
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "better-sqlite3": "5.4.0",
+    "columnify": "^1.5.4",
     "json-stable-stringify": "1.0.1",
     "minimist": "^1.2.0",
     "node-dig-dns": "0.2.10",
