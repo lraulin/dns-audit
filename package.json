@@ -8,10 +8,12 @@
     "dns-audit": "bin/dns-audit.js"
   },
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "test": "mocha"
   },
   "dependencies": {
     "better-sqlite3": "5.4.0",
+    "chai": "^4.2.0",
     "columnify": "^1.5.4",
     "json-stable-stringify": "1.0.1",
     "minimist": "^1.2.0",
