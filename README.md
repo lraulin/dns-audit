@@ -50,7 +50,7 @@ The app is meant to be automated with cron. Create a cron job with `crontab -e` 
     0   *   *   *   *   sudo /usr/bin/dns-audit -d
     30   8   *   *   *   sudo /usr/bin/dns-audit -m
 
-The first line makes it check DNS records every hour. The line schedules an email to be sent every day at 8:30am. Sudo can be omitted if the cron job has necessary privileges.
+The first line makes it check DNS records every hour. The second line schedules an email to be sent every day at 8:30am. Sudo can be omitted if the cron job has necessary privileges.
 
 ## Configuration
 
