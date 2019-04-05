@@ -42,3 +42,18 @@ This command retrieves the time the last email was sent from the database, fetch
     dns-audit -t
 
 For debugging. This generates the email that would be sent, and emails it to the configured 'dev_emails', but does not record the time (so it will not affect the message generated next time the -m flag is used).
+
+## Automating
+
+The app is meant to be automated with cron. Create a cron job with `crontab -e` and add the following:
+
+    0   *   *   *   *   sudo /usr/bin/dns-audit -d
+    30   8   *   *   *   sudo /usr/bin/dns-audit -m
+
+The first line makes it check DNS records every hour. The line schedules an email to be sent every day at 8:30am. Sudo can be omitted if the cron job has necessary privileges.
+
+## Configuration
+
+Settings are in config.json in the src folder. The email lists used for messages and for the debugging test message can be set with 'emails' and 'dev_emails' respectively. Emails should be given as an array of strings. The data directory can be set with 'data_path'.
+
+Currently, the lists of record types and domains can only be changed by interacting with the database. I might change it to read them from the config file, but that will take refactoring. If you know sqlite, you interact with the database file at the command line by executing `sqlite3 /usr/local/share/dns-audit/data.db`. The file can also be examined and modified graphically with [DB Browser for SQLite](https://sqlitebrowser.org/), but obviously not on the server.

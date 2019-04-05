@@ -1,6 +1,5 @@
 {
   "emails": ["LIST-OST-ED-DNSReports@dot.gov"],
   "dev_emails": ["lee.raulin.ctr@dot.gov"],
-  "types": ["A", "AAAA", "CNAME", "MX", "NS", "SOA"],
   "data_path": "/usr/local/share/dns-audit/"
 }
