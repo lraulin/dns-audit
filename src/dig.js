@@ -6,9 +6,9 @@
 const dig = require("node-dig-dns");
 const stringify = require("json-stable-stringify");
 const { insertIntoTblRecord, insertIntoTblRunDatetime } = require("./sqlite");
-const { domains, domainIdLookup, types } = require("./dbCollections");
 const { parseDigForRecordValues } = require("./digParse");
 const logger = require("./logger");
+const { domains, types } = require("config");
 
 const digDomain = async ({ runId, domain, types }) => {
   try {

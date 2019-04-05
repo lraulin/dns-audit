@@ -56,12 +56,12 @@ module.exports.insertIntoTblRunDatetime = epoch =>
     .run().lastInsertRowid;
 
 const sqlInsertIntoTblRecord = db.prepare(
-  `INSERT INTO tbl_record (run_id, domain_id, record_values, raw) VALUES (?, ?, ?, ?);`,
+  `INSERT INTO tbl_record (run_id, domain_name, record_values, raw) VALUES (?, ?, ?, ?);`,
 );
 
 // Insert row into record table and return new row id.
-module.exports.insertIntoTblRecord = ({ runId, domainId, records, raw }) =>
-  sqlInsertIntoTblRecord.run(runId, domainId, records, raw).lastInsertRowid;
+module.exports.insertIntoTblRecord = ({ runId, domain, records, raw }) =>
+  sqlInsertIntoTblRecord.run(runId, domain, records, raw).lastInsertRowid;
 
 // Query database for all records from last two runs where values don't match.
 module.exports.getMismatches = () => {
