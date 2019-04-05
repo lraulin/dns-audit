@@ -1,6 +1,6 @@
 # dns-audit
 
-Node console app to run dig for each domain in a list of domains and compare the results to the previous run. It assumes a Unix-like environment (tested on Mac OSX and RHEL.) It can also send an email combining reports generated since the last email was sent. The email function assumes the presence of the Unix 'mail' command, configured to send email via a Mail Transfer Agent like Postfix or Sendmail. (If executing `mail -s 'test' address@example.com` doesn't work, it will not be able to send emails.)
+A node console app for monitoring a list of domains for changes in record values of specified types (A, AAAA, CNAME, MX, NS, and SOA). It assumes a Unix-like environment (tested on Mac OSX and RHEL.) It can also send an email combining reports generated since the last email was sent. The email function assumes the presence of the Unix 'mail' command, configured to send email via a Mail Transfer Agent like Postfix or Sendmail. (If executing `mail -s 'test' address@example.com` doesn't work, it will not be able to send emails.)
 
 ## Differences
 
