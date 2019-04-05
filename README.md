@@ -27,7 +27,7 @@ The command 'dns-audit' should now be available for all users. If not, it can be
 
 ## Data Directory
 
-The app uses a data directory in /usr/local/share/dns-audit, where it stores its data in a sqlite3 database file, as well as log files. (This can be changed to a different directory by changeing the value of "data_path" in the config.json file in the src folder.) This ensures the data will not change if the app if updated or removed, and if installed by a different user, it will use the same data. It will attempt to create this directory if it does not exist (and will create the database file, generating the schema and populating the type and domain list tables, if it is not found). However, user permissions may cause problems. If so, create the directory manually if necessary, and make sure the current user has read-write permissions for it.
+The app uses a data directory in /usr/local/share/dns-audit, where it stores its data in a sqlite3 database file, as well as log files. (This can be changed to a different directory by changeing the value of "data_path" in the config.json file in the src folder.) This ensures the data will not change if the app is updated or removed, and if installed by a different user, it will use the same data. It will attempt to create this directory if it does not exist (and will create the database file, generating the schema and populating the type and domain list tables, if it is not found). However, user permissions may cause problems. If so, create the directory manually if necessary, and make sure the current user has read-write permissions for it.
 
 ## Usage
 
