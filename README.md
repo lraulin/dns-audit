@@ -10,7 +10,7 @@ The app looks for changes in the values for DNS records of specified types for e
 
 Install [Node JS](https://nodejs.org/en/download/package-manager/) if it is not installed already. Preferably v11, but v10 will probably work.
 
-Clone the repository.
+Clone the repository. (I increment the version number every time a changed version is successfully deployed to the server.)
 
     git clone https://github.com/lraulin/dns-audit/tree/v1.1.3
 
